@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "227487280628",
+    "firebase_url": "https://okaredb-default-rtdb.firebaseio.com",
+    "project_id": "okaredb",
+    "storage_bucket": "okaredb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227487280628:android:cf0227851480493a1d1da1",
+        "android_client_info": {
+          "package_name": "com.example.dht11data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227487280628-e562k5i2rgfkkmc91cbf0qh992eqnn71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB08AURX_-IV1VLKE-52oel-zZb_W-L-Uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227487280628-e562k5i2rgfkkmc91cbf0qh992eqnn71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227487280628:android:60d0aa0b371b9bef1d1da1",
+        "android_client_info": {
+          "package_name": "com.example.home"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227487280628-e562k5i2rgfkkmc91cbf0qh992eqnn71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB08AURX_-IV1VLKE-52oel-zZb_W-L-Uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227487280628-e562k5i2rgfkkmc91cbf0qh992eqnn71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227487280628:android:b24508f4c191b6271d1da1",
+        "android_client_info": {
+          "package_name": "com.example.okare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227487280628-e562k5i2rgfkkmc91cbf0qh992eqnn71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB08AURX_-IV1VLKE-52oel-zZb_W-L-Uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227487280628-e562k5i2rgfkkmc91cbf0qh992eqnn71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

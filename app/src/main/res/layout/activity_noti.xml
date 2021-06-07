@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".noti">
+
+    <ImageView
+        android:id="@+id/通_藍底_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:background="@drawable/_downblue"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_downblue" />
+
+    <LinearLayout
+        android:layout_width="417dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/通_通知_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down1" />
+
+        <ImageButton
+            android:id="@+id/通_首頁_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down2" />
+
+        <ImageButton
+            android:id="@+id/通_個人_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down3" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/通_上層黃框_IV"
+        android:layout_width="0dp"
+        android:layout_height="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_noti_up" />
+
+    <ImageView
+        android:id="@+id/通_中底淺黃框_IV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/_yellowbackground"
+        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/通_上層黃框_IV"
+        app:srcCompat="@drawable/_yellowbackground" />
+
+    <ImageView
+        android:id="@+id/通_紅框_IV"
+        android:layout_width="0dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/通_上層黃框_IV"
+        app:srcCompat="@drawable/_red" />
+
+    <ImageView
+        android:id="@+id/通_白框_IV"
+        android:layout_width="0dp"
+        android:layout_height="133dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/通_紅框_IV"
+        app:srcCompat="@drawable/_white" />
+
+    <ImageView
+        android:id="@+id/通_灰框_IV"
+        android:layout_width="0dp"
+        android:layout_height="133dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/通_白框_IV"
+        app:srcCompat="@drawable/_gray" />
+
+    <TextView
+        android:id="@+id/通_紅文字_TV"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="提醒您!用戶巴捷於今日早上09:03中度跌倒，請儘速與家人聯繫。"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/通_紅框_IV"
+        app:layout_constraintEnd_toEndOf="@+id/通_紅框_IV"
+        app:layout_constraintStart_toStartOf="@+id/通_紅框_IV"
+        app:layout_constraintTop_toTopOf="@+id/通_紅框_IV"
+        app:layout_constraintVertical_bias="0.269" />
+
+    <TextView
+        android:id="@+id/通_紅日期_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5月22日"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/通_紅文字_TV"
+        app:layout_constraintTop_toBottomOf="@+id/通_紅文字_TV" />
+
+    <TextView
+        android:id="@+id/通_白文字_TV"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:text="提醒您，明日5月13日下午，台大醫院心臟科門診回診。"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/通_白框_IV"
+        app:layout_constraintStart_toStartOf="@+id/通_白框_IV"
+        app:layout_constraintTop_toBottomOf="@+id/通_紅框_IV" />
+
+    <TextView
+        android:id="@+id/通_白日期_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5月22日"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/通_白文字_TV"
+        app:layout_constraintTop_toBottomOf="@+id/通_白文字_TV" />
+
+    <TextView
+        android:id="@+id/通_灰文字_TV"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="25dp"
+        android:text="提醒您，降血糖藥用藥時間為今日下午13:00。"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/通_灰框_IV"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/通_白框_IV" />
+
+    <TextView
+        android:id="@+id/通_灰日期_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5月20日"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/通_灰文字_TV"
+        app:layout_constraintTop_toBottomOf="@+id/通_灰文字_TV" />
+
+    <ImageView
+        android:id="@+id/通_個人頭貼_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/通_上層黃框_IV"
+        app:layout_constraintTop_toTopOf="@+id/通_上層黃框_IV"
+        app:srcCompat="@drawable/_head" />
+
+    <TextView
+        android:id="@+id/通_帳號名稱_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="帳號名稱"
+        android:textColor="@color/ccaaffee"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/通_個人頭貼_IV"
+        app:layout_constraintTop_toTopOf="@+id/通_個人頭貼_IV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.home">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Home">
+        <activity android:name=".Personal"></activity>
+        <activity android:name=".Medicine" />
+        <activity android:name=".Doctor" />
+        <activity android:name=".MedicalCard" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".noti" />
+        <activity android:name=".edu_09" />
+        <activity android:name=".edu_08" />
+        <activity android:name=".edu_07" />
+        <activity android:name=".edu_06" />
+        <activity android:name=".edu_05" />
+        <activity android:name=".edu_04" />
+        <activity android:name=".edu_03" />
+        <activity android:name=".edu_02" />
+        <activity android:name=".edu_01" />
+        <activity android:name=".edu_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

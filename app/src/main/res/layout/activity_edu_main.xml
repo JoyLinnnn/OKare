@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edu_main">
+
+    <ImageView
+        android:id="@+id/衛_OKare_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:background="@color/upcolor"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_up" />
+
+    <ImageView
+        android:id="@+id/通_藍底_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:background="@drawable/_downblue"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_downblue" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/衛_OKare_IV">
+
+        <ImageButton
+            android:id="@+id/衛_居家檢測_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/_homeyellow"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_homeyellow" />
+
+        <ImageButton
+            android:id="@+id/衛_醫療小卡_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/_up2"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up2" />
+
+        <ImageButton
+            android:id="@+id/衛_預約掛號_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/_up4"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up3" />
+
+        <ImageButton
+            android:id="@+id/衛_即時定位_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/_up5"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up4" />
+
+        <ImageButton
+            android:id="@+id/衛_衛教資訊_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/_edublue"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_edublue" />
+
+        <ImageButton
+            android:id="@+id/衛_飲食推薦_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_up6"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/通_通知_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down1" />
+
+        <ImageButton
+            android:id="@+id/通_首頁_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down2" />
+
+        <ImageButton
+            android:id="@+id/通_個人_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down3" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/中黃底_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/_yellowbackground"
+        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/_yellowbackground" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintEnd_toEndOf="@+id/中黃底_IV"
+        app:layout_constraintStart_toStartOf="@+id/中黃底_IV"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/衛_鬧中風_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w4"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w4" />
+
+        <ImageButton
+            android:id="@+id/衛_腎臟疾病_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w5"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w5" />
+
+        <ImageButton
+            android:id="@+id/衛_氣喘_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w6"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <ImageButton
+            android:id="@+id/衛_過敏_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w7"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w7" />
+
+        <ImageButton
+            android:id="@+id/衛_痛風_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w8"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w8" />
+
+        <ImageButton
+            android:id="@+id/衛_急救知識站_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w9"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w9" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/衛_心血管疾病_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w1"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w1" />
+
+        <ImageButton
+            android:id="@+id/衛_慢性肺病_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w2"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w2" />
+
+        <ImageButton
+            android:id="@+id/衛_糖尿病_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w3"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w3" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
