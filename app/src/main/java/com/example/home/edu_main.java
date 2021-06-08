@@ -95,6 +95,48 @@ public class edu_main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
+        通_個人_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_main.this,Personal.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton 衛_居家檢測_IB=findViewById(R.id.衛_居家檢測_IB);
+        衛_居家檢測_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_main.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 衛_醫療小卡_IB=findViewById(R.id.衛_醫療小卡_IB);
+        衛_醫療小卡_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_main.this,MedicalCard.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 衛_衛教資訊_IB=findViewById(R.id.衛_衛教資訊_IB);
+        衛_衛教資訊_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_main.this,edu_main.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 衛_飲食推薦_IB=findViewById(R.id.衛_飲食推薦_IB);
+        衛_飲食推薦_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_main.this,commendMain.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Home">
-        <activity android:name=".Personal"></activity>
+        <activity android:name=".comm_01"></activity>
+        <activity android:name=".commendMain" />
+        <activity android:name=".Personal" />
         <activity android:name=".Medicine" />
         <activity android:name=".Doctor" />
         <activity android:name=".MedicalCard" />

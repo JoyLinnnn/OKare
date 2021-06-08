@@ -51,7 +51,14 @@ public class MainActivity extends AppCompatActivity {
         {
 
         }
-
+        ImageButton 居_居家檢測_IB=findViewById(R.id.居_居家檢測_IB);
+        居_居家檢測_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
         ImageButton 居_衛教資訊_IB=findViewById(R.id.居_衛教資訊_IB);
         居_衛教資訊_IB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +67,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 居_醫療小卡_IB=findViewById(R.id.居_醫療小卡_IB);
+        居_醫療小卡_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,MedicalCard.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 居_飲食推薦_IB=findViewById(R.id.居_飲食推薦_IB);
+        居_飲食推薦_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,commendMain.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         ImageButton _通知_IB=findViewById(R.id._通知_IB);
         _通知_IB.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +94,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton _個人_IB=findViewById(R.id._個人_IB);
+        _個人_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Personal.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
