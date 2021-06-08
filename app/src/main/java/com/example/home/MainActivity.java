@@ -20,6 +20,7 @@ import static com.example.home.R.id.居_衛教資訊_IB;
 public class MainActivity extends AppCompatActivity {
     DatabaseReference mydb;
     TextView temp,hum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        }
 
     }
-}
