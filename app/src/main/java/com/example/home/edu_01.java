@@ -2,6 +2,7 @@ package com.example.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -25,6 +26,22 @@ public class edu_01 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        ImageButton _通知_IB=findViewById(R.id._通知_IB);
+        _通知_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_01.this,noti.class);
+                startActivity(intent);
+            }
+        });ImageButton _個人_IB=findViewById(R.id._個人_IB);
+        _個人_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_01.this,Personal.class);
+                startActivity(intent);
             }
         });
         衛_心血管內文_TV = findViewById(R.id.衛_心血管內文_TV);
