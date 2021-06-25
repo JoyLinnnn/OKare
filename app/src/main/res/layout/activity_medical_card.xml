@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MedicalCard">
@@ -17,16 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_up" />
 
-    <ImageView
-        android:id="@+id/通_藍底_IV"
-        android:layout_width="wrap_content"
-        android:layout_height="65dp"
-        android:background="@drawable/_downblue"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/_downblue" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -98,44 +92,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="417dp"
-        android:layout_height="65dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/通_通知_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down1" />
-
-        <ImageButton
-            android:id="@+id/通_首頁_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down2" />
-
-        <ImageButton
-            android:id="@+id/通_個人_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down3" />
-
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/醫_上白底_IV"
@@ -503,7 +459,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -556,4 +512,55 @@
         app:layout_constraintStart_toEndOf="@+id/Two電話"
         app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1電話輸入_ET" />
 
+
+    <ImageView
+        android:id="@+id/通_藍底_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:background="@drawable/_downblue"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_downblue" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="417dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/通_通知_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down1" />
+
+        <ImageButton
+            android:id="@+id/通_首頁_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down2" />
+
+        <ImageButton
+            android:id="@+id/通_個人_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down3" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
