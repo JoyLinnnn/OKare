@@ -184,7 +184,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:text="糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文糖尿病內文"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/飲_白框_IV"
         app:layout_constraintEnd_toEndOf="@+id/飲_白框_IV"
         app:layout_constraintStart_toStartOf="@+id/飲_白框_IV"
