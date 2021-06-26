@@ -215,10 +215,9 @@
         android:text="癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌癌"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView13"
-        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="@+id/飲_白框_IV"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView14"
-        app:layout_constraintTop_toStartOf="@+id/飲_白框_IV"
+        app:layout_constraintStart_toStartOf="@+id/飲_白框_IV"
         app:layout_constraintTop_toTopOf="@+id/飲_白框_IV"
         app:layout_constraintVertical_bias="0.0" />
 
