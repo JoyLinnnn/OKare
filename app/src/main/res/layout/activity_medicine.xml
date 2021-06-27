@@ -224,7 +224,7 @@
         app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV">
 
         <ImageButton
-            android:id="@+id/黃字服藥_IB"
+            android:id="@+id/服藥_IB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -233,7 +233,7 @@
             app:srcCompat="@drawable/_yellowmedical" />
 
         <ImageButton
-            android:id="@+id/白字回診_IB"
+            android:id="@+id/回診_IB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

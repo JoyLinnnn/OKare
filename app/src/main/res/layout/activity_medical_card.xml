@@ -125,7 +125,7 @@
             app:srcCompat="@drawable/_iconmdc" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/醫療小卡_IB"
             android:layout_width="55dp"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
@@ -144,7 +144,7 @@
             app:srcCompat="@drawable/_iconnoti" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/提醒事項_IB"
             android:layout_width="55dp"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"

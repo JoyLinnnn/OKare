@@ -65,5 +65,78 @@ public class commendMain extends AppCompatActivity {
             }
         });
 
+        ImageButton 飲_糖尿病框_IB=findViewById(R.id.飲_糖尿病框_IB);
+        飲_糖尿病框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_01.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_高血壓框_IB=findViewById(R.id.飲_高血壓框_IB);
+        飲_高血壓框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_02.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_高膽固醇框_IB=findViewById(R.id.飲_高膽固醇框_IB);
+        飲_高膽固醇框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_03.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_痛風框_IB=findViewById(R.id.飲_痛風框_IB);
+        飲_痛風框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_04.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_心血管疾病框_IB=findViewById(R.id.飲_心血管疾病框_IB);
+        飲_心血管疾病框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_05.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_脂肪肝框_IB=findViewById(R.id.飲_脂肪肝框_IB);
+        飲_脂肪肝框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_06.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_腎臟疾病框_IB=findViewById(R.id.飲_腎臟疾病框_IB);
+        飲_腎臟疾病框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_07.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_癌症框_IB=findViewById(R.id.飲_癌症框_IB);
+        飲_癌症框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_08.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_過敏框_IB=findViewById(R.id.飲_過敏框_IB);
+        飲_過敏框_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,comm_09.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
