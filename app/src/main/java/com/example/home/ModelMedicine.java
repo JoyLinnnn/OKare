@@ -1,15 +1,15 @@
 package com.example.home;
 
-public class ModelUsers2 {
+public class ModelMedicine {
     private String meditime;
     private String mediname;
-    private String key;
+    private String cey;
 
-    public ModelUsers2() {
+    public ModelMedicine(){
 
     }
 
-    public ModelUsers2(String meditime, String mediname) {
+    public ModelMedicine(String meditime, String mediname) {
         this.meditime = meditime;
         this.mediname = mediname;
     }
@@ -30,13 +30,11 @@ public class ModelUsers2 {
         this.mediname = mediname;
     }
 
-    public String getKey() {
-        return key;
+    public String getCey() {
+        return cey;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setCey(String cey) {
+        this.cey = cey;
     }
 }
-
-

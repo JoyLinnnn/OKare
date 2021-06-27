@@ -21,11 +21,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Medicine extends AppCompatActivity {
-    FloatingActionButton addd2;
-    AdapterUsers adapterUsers;
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-    ArrayList<ModelUsers> listUsers;
-    RecyclerView tv_tampil2;
+    FloatingActionButton ad;
+    AdapterMedicine adapterMedicine;
+    DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+    ArrayList<ModelMedicine> listMedicine;
+    RecyclerView tv_tamp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,33 +39,33 @@ public class Medicine extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        addd2 = findViewById(R.id.btn_addd2);
-        addd2.setOnClickListener(new View.OnClickListener() {
+        ad = findViewById(R.id.btn_ad);
+        ad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Medicine.this, AdddActivity2.class));
+                startActivity(new Intent(Medicine.this, AdActivity.class));
             }
         });
-        tv_tampil2 = findViewById(R.id.tv_tampil2);
-        RecyclerView.LayoutManager mLayout = new LinearLayoutManager(this);
-        tv_tampil2.setLayoutManager(mLayout);
-        tv_tampil2.setItemAnimator(new DefaultItemAnimator());
+        tv_tamp = findViewById(R.id.tv_tamp);
+        RecyclerView.LayoutManager mmLayout = new LinearLayoutManager(this);
+        tv_tamp.setLayoutManager(mmLayout);
+        tv_tamp.setItemAnimator(new DefaultItemAnimator());
 
-        tempilDate();
+        tampData();
     }
 
-    private void tempilDate() {
-        database.child("Medicine").addValueEventListener(new ValueEventListener() {
+    private void tampData() {
+        data.child("Medicine").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                listUsers = new ArrayList<>();
-                for(DataSnapshot item:snapshot.getChildren()){
-                    ModelUsers ur = item.getValue(ModelUsers.class);
-                    ur.setKey(item.getKey());
-                    listUsers.add(ur);
+                listMedicine = new ArrayList<>();
+                for(DataSnapshot itemm:snapshot.getChildren()){
+                    ModelMedicine mdc = itemm.getValue(ModelMedicine.class);
+                    mdc.setCey(itemm.getKey());
+                    listMedicine.add(mdc);
                 }
-                adapterUsers = new AdapterUsers(listUsers, Medicine.this);
-                tv_tampil2.setAdapter(adapterUsers);
+                adapterMedicine = new AdapterMedicine(listMedicine, Medicine.this);
+                tv_tamp.setAdapter(adapterMedicine);
             }
 
             @Override

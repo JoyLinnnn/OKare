@@ -11,7 +11,7 @@
     android:layout_marginBottom="10dp"
     app:cardCornerRadius="12dp"
     app:cardElevation="8dp"
-    android:id="@+id/card_hasil2">
+    android:id="@+id/card_resul">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +24,7 @@
             android:id="@+id/tv_meditime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="服藥時間"
+            android:text="吃藥時間"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -32,7 +32,7 @@
             android:id="@+id/tv_mediname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="用藥名稱及數量"
+            android:text="藥品名和數量"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
