@@ -40,14 +40,14 @@ public class AdddActivity extends AppCompatActivity {
                     database.child("Users").push().setValue(new ModelUsers(getTime, getHint)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(AdddActivity.this, "oooh yeah! data success! ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdddActivity.this, "新增成功", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(AdddActivity.this, MainActivity.class));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(AdddActivity.this, "ooooh no! data fail! ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdddActivity.this, "新增失敗", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
