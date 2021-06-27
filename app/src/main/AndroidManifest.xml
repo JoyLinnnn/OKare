@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Home">
-        <activity android:name=".AdddActivity"></activity>
+        <activity android:name=".AdddActivity2"></activity>
+        <activity android:name=".AdddActivity" />
         <activity android:name=".comm_09" />
         <activity android:name=".comm_08" />
         <activity android:name=".comm_07" />

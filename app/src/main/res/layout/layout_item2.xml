@@ -7,11 +7,11 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="15dp"
     android:layout_marginLeft="15dp"
-    app:cardBackgroundColor="@color/upcolor"
+    app:cardBackgroundColor="@color/purple_200"
     android:layout_marginBottom="10dp"
     app:cardCornerRadius="12dp"
     app:cardElevation="8dp"
-    android:id="@+id/card_hasil">
+    android:id="@+id/card_hasil2">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,18 +21,18 @@
         android:layout_marginRight="16dp"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/tv_backhospitaltime"
+            android:id="@+id/tv_meditime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="回診時間"
+            android:text="服藥時間"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/tv_hospitalsite"
+            android:id="@+id/tv_mediname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="醫院門診"
+            android:text="用藥名稱及數量"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
