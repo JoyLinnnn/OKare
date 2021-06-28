@@ -21,14 +21,6 @@ public class edu_09 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_09);
 
-        ImageButton 衛_衛教資訊_IB=findViewById(R.id.衛_衛教資訊_IB);
-        衛_衛教資訊_IB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
         ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
         通_通知_IB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +36,40 @@ public class edu_09 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton 衛_居家檢測_IB=findViewById(R.id.衛_居家檢測_IB);
+        衛_居家檢測_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_09.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 衛_醫療小卡_IB=findViewById(R.id.衛_醫療小卡_IB);
+        衛_醫療小卡_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_09.this,MedicalCard.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 衛_衛教資訊_IB=findViewById(R.id.衛_衛教資訊_IB);
+        衛_衛教資訊_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_09.this,edu_main.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 衛_飲食推薦_IB=findViewById(R.id.衛_飲食推薦_IB);
+        衛_飲食推薦_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_09.this,commendMain.class);
+                startActivity(intent);
+            }
+        });
+
         衛_急救知識站內文_TV = findViewById(R.id.衛_急救知識站內文_TV);
         // 資料若超過頁面，須設定可以Scrolling
         衛_急救知識站內文_TV.setMovementMethod(ScrollingMovementMethod.getInstance());

@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/衛_OKare_IV">
 
         <ImageButton
-            android:id="@+id/醫_居家檢測_IB"
+            android:id="@+id/居_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
@@ -48,7 +48,7 @@
             app:srcCompat="@drawable/_homeyellow" />
 
         <ImageButton
-            android:id="@+id/醫_醫療小卡_IB"
+            android:id="@+id/醫_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
@@ -58,7 +58,7 @@
             app:srcCompat="@drawable/_greenmdc" />
 
         <ImageButton
-            android:id="@+id/衛_預約掛號_IB"
+            android:id="@+id/預_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
@@ -68,7 +68,7 @@
             app:srcCompat="@drawable/_up3" />
 
         <ImageButton
-            android:id="@+id/衛_即時定位_IB"
+            android:id="@+id/即_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
@@ -78,24 +78,23 @@
             app:srcCompat="@drawable/_up4" />
 
         <ImageButton
-            android:id="@+id/衛_衛教資訊_IB"
+            android:id="@+id/衛_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:background="@drawable/_up6"
+            android:background="@drawable/_up5"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/_up5" />
 
         <ImageButton
-            android:id="@+id/衛_飲食推薦_IB"
+            android:id="@+id/飲_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/_up6"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/_up6" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -169,7 +168,7 @@
             app:srcCompat="@drawable/_iconmdc" />
 
         <ImageButton
-            android:id="@+id/醫療小卡文字_IB"
+            android:id="@+id/醫療小卡_IB"
             android:layout_width="55dp"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
@@ -188,7 +187,7 @@
             app:srcCompat="@drawable/_iconnoti" />
 
         <ImageButton
-            android:id="@+id/提醒事項文字_IB"
+            android:id="@+id/提醒事項_IB"
             android:layout_width="55dp"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
