@@ -29,7 +29,7 @@ public class comm_06 extends AppCompatActivity {
         飲_脂肪肝內文_TV.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         // 讀取 raw folder 的檔案
-        InputStreamReader isr = new InputStreamReader(this.getResources().openRawResource(R.raw.food_heart));
+        InputStreamReader isr = new InputStreamReader(this.getResources().openRawResource(R.raw.food_fat));
         BufferedReader br = new BufferedReader(isr);
         StringBuilder sb = new StringBuilder();
         String line;
