@@ -35,8 +35,8 @@ public class AdapterMedicine extends RecyclerView.Adapter<AdapterMedicine.MyHold
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         final ModelMedicine da = mmList.get(position);
-        holder.tv_meditime.setText("Time:"+ da.getMeditime());
-        holder.tv_mediname.setText("Name:"+ da.getMediname());
+        holder.tv_meditime.setText("用藥時間："+ da.getMeditime());
+        holder.tv_mediname.setText("藥品及數量："+ da.getMediname());
 
     }
 

@@ -35,8 +35,8 @@ public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final ModelUsers data = mList.get(position);
-        holder.tv_backhospitaltime.setText("Back hospital time : "+data.getBacktime());
-        holder.tv_hospitalsite.setText("Hospital site : "+data.getHossite());
+        holder.tv_backhospitaltime.setText("日期及時間："+data.getBacktime());
+        holder.tv_hospitalsite.setText("門診及編號："+data.getHossite());
 
     }
 

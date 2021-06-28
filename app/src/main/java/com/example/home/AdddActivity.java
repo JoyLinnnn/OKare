@@ -45,21 +45,21 @@ public class AdddActivity extends AppCompatActivity {
                 String getHint = edHint.getText().toString();
 
                 if (getTime.isEmpty()){
-                    edTime.setError("please input date and time...");
+                    edTime.setError("請輸入回診日期及時間...");
                 }else if (getHint.isEmpty()){
-                    edHint.setError("please input hospital and number...");
+                    edHint.setError("請輸入醫院門診及編號...");
                 }else{
                     database.child("Users").push().setValue(new ModelUsers(getTime, getHint)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(AdddActivity.this, "新增成功", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdddActivity.this, "回診資料新增成功", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(AdddActivity.this, Doctor.class));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(AdddActivity.this, "新增失敗", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdddActivity.this, "回診資料新增失敗！", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }

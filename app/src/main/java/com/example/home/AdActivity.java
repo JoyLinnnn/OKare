@@ -44,21 +44,21 @@ public class AdActivity extends AppCompatActivity {
                 String getMN = edMN.getText().toString();
 
                 if (getMT.isEmpty()){
-                    edMT.setError("請輸入日期...");
+                    edMT.setError("請輸入日期及...");
                 }else if (getMN.isEmpty()){
-                    edMN.setError("請輸入藥品數字...");
+                    edMN.setError("請輸入藥品名稱及數量...");
                 }else{
                     data.child("Medicine").push().setValue(new ModelMedicine(getMT, getMN)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(AdActivity.this, "終於成功ㄌ! ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdActivity.this, "用藥資料新增成功！", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(AdActivity.this, Medicine.class));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(AdActivity.this, "噢不又失敗! ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdActivity.this, "用藥資料新增失敗！", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
