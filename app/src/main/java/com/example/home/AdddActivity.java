@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,10 +24,21 @@ public class AdddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addd);
+
+        Button 確定新增=findViewById(R.id.確定新增);
+        確定新增.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AdddActivity.this,Doctor.class);
+                startActivity(intent);
+            }
+        });
+
+
         edTime = findViewById(R.id.edTime);
         edHint = findViewById(R.id.edHint);
-        btn_sureadd = findViewById(R.id.btn_sureadd);
-        btn_sureadd.setOnClickListener(new View.OnClickListener() {
+        確定新增 = findViewById(R.id.確定新增);
+        確定新增.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String getTime = edTime.getText().toString();
@@ -41,7 +53,7 @@ public class AdddActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast.makeText(AdddActivity.this, "新增成功", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(AdddActivity.this, MainActivity.class));
+                            startActivity(new Intent(AdddActivity.this, Doctor.class));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {

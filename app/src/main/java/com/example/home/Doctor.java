@@ -40,6 +40,106 @@ public class Doctor extends AppCompatActivity {
 
             }
         });
+        ImageButton 回診_IB = findViewById(R.id.回診_IB);
+        回診_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Doctor.this, Doctor.class);
+                startActivity(intent);
+
+            }
+        });
+        ImageButton 醫療小卡_IB = findViewById(R.id.醫療小卡_IB);
+        醫療小卡_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Doctor.this, MedicalCard.class);
+                startActivity(intent);
+
+            }
+        });
+        ImageButton 提醒事項_IB = findViewById(R.id.提醒事項_IB);
+        提醒事項_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Doctor.this, Medicine.class);
+                startActivity(intent);
+
+            }
+        });
+
+        ImageButton 居_IB=findViewById(R.id.居_IB);
+        居_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Doctor.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 醫_IB=findViewById(R.id.醫_IB);
+        醫_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Doctor.this,MedicalCard.class);
+                startActivity(intent);
+            }
+        });
+        /*ImageButton 預_IB=findViewById(R.id.預_IB);
+        預_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(comm_01.this,noti.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 即_IB=findViewById(R.id.即_IB);
+        即_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(comm_01.this,noti.class);
+                startActivity(intent);
+            }
+        });*/
+        ImageButton 衛_IB=findViewById(R.id.衛_IB);
+        衛_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Doctor.this,edu_main.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 飲_IB=findViewById(R.id.飲_IB);
+        飲_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Doctor.this,commendMain.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
+        通_通知_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Doctor.this,noti.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
+        通_個人_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Doctor.this,Personal.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
         addd = findViewById(R.id.btn_addd);
         addd.setOnClickListener(new View.OnClickListener() {
             @Override

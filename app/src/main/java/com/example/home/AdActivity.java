@@ -24,10 +24,20 @@ public class AdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad);
 
+        Button 確定新增=findViewById(R.id.確定新增);
+        確定新增.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AdActivity.this,Medicine.class);
+                startActivity(intent);
+            }
+        });
+
+
         edMT = findViewById(R.id.edMT);
         edMN = findViewById(R.id.edMN);
-        btn_suadd = findViewById(R.id.btn_suadd);
-        btn_suadd.setOnClickListener(new View.OnClickListener() {
+        確定新增 = findViewById(R.id.確定新增);
+        確定新增.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String getMT = edMT.getText().toString();
@@ -42,7 +52,7 @@ public class AdActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast.makeText(AdActivity.this, "終於成功ㄌ! ", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(AdActivity.this, MainActivity.class));
+                            startActivity(new Intent(AdActivity.this, Medicine.class));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
