@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Homepage" >
+
+    <ImageView
+        android:id="@+id/background2_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_homepage"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/background_blue" />
+
+    <ImageView
+        android:id="@+id/background_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background_top" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/tv_home_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="首頁"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_homepage"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <ImageView
+        android:id="@+id/ic_health_homepage"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_homepage"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/health" />
+
+    <ImageView
+        android:id="@+id/ic_card_homepage"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_health_homepage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ic_health_homepage"
+        app:layout_constraintTop_toTopOf="@+id/ic_health_homepage"
+        app:srcCompat="@drawable/card" />
+
+    <ImageView
+        android:id="@+id/ic_reservation_homepage"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_health_homepage"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/reservation" />
+
+    <ImageView
+        android:id="@+id/ic_location_homepage"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_health_homepage"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/ic_healthinfo_homepage"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_reservation_homepage"
+        app:srcCompat="@drawable/heathinfo" />
+
+    <ImageView
+        android:id="@+id/ic_eat_homepage"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ic_healthinfo_homepage"
+        app:srcCompat="@drawable/eat" />
+
+    <ImageView
+        android:id="@+id/ic_personal_homepage"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background2_homepage"
+        app:srcCompat="@drawable/personinfo" />
+
+    <ImageView
+        android:id="@+id/ic_because_homepage"
+        android:layout_width="356dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/background2_homepage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_healthinfo_homepage"
+        app:layout_constraintVertical_bias="0.32999998"
+        app:srcCompat="@drawable/because_homepage" />
+
+    <ImageView
+        android:id="@+id/ic_notice_homepage"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/background2_homepage"
+        app:layout_constraintTop_toTopOf="@+id/background2_homepage"
+        app:srcCompat="@drawable/notice" />
+
+    <ImageView
+        android:id="@+id/ic_home_homepage"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/background2_homepage"
+        app:layout_constraintTop_toTopOf="@+id/background2_homepage"
+        app:srcCompat="@drawable/home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
