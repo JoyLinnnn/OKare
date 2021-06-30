@@ -71,7 +71,7 @@ public class edu_06 extends AppCompatActivity {
             }
         });
 
-        衛_氣喘內文_TV = findViewById(R.id.衛_氣喘內文_TV);
+        衛_氣喘內文_TV = findViewById(R.id.衛_新冠肺炎內文_TV);
         // 資料若超過頁面，須設定可以Scrolling
         衛_氣喘內文_TV.setMovementMethod(ScrollingMovementMethod.getInstance());
 
