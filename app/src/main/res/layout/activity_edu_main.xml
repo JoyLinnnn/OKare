@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/通_藍底_IV"
         android:layout_width="wrap_content"
-        android:layout_height="65dp"
+        android:layout_height="50dp"
         android:background="@drawable/_downblue"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +100,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="50dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -201,12 +201,12 @@
 
         <ImageButton
             android:id="@+id/衛_過敏_IB"
-            android:layout_width="wrap_content"
+            android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/_w7"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/_w7" />
+            app:srcCompat="@drawable/ed7" />
 
         <ImageButton
             android:id="@+id/衛_痛風_IB"

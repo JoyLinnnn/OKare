@@ -24,7 +24,7 @@ import static com.example.home.R.id.居_衛教資訊_IB;
 public class MainActivity extends AppCompatActivity {
     DatabaseReference mydb;
     TextView temp,hum;
-    WebView web;
+ /*   WebView web;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         temp=(TextView)findViewById(R.id.temp);
         hum=(TextView)findViewById(R.id.hum);
-        web=findViewById(R.id.webView);
+/*        web=findViewById(R.id.webView);*/
         mydb= FirebaseDatabase.getInstance().getReference().child("DHT11SensorData");
-        WebSettings webSettings=web.getSettings();
+/*        WebSettings webSettings=web.getSettings();
         ((WebSettings) webSettings).setJavaScriptEnabled(true);
         web.setWebViewClient(new Callback());
-        web.loadUrl("http://192.168.35.52/");
+        web.loadUrl("http://192.168.35.52/");*/
         try {
 
             mydb.addValueEventListener(new ValueEventListener() {

@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/通_藍底_IV"
         android:layout_width="wrap_content"
-        android:layout_height="65dp"
+        android:layout_height="50dp"
         android:background="@drawable/_downblue"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,8 +110,8 @@
         app:srcCompat="@drawable/_yellowbackground" />
 
     <LinearLayout
-        android:layout_width="417dp"
-        android:layout_height="65dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
