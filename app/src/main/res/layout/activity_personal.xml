@@ -19,7 +19,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="417dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_weight="1"
         android:orientation="horizontal"
@@ -58,7 +58,7 @@
 
     <ImageView
         android:id="@+id/個人中心上層_IV"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="158dp"
         android:background="@color/upcolor"
         app:layout_constraintEnd_toEndOf="parent"
