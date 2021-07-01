@@ -224,3 +224,5 @@ public class MedicalCard extends AppCompatActivity {
         });
     }
 }
+
+//test
