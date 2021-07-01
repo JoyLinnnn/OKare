@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class edu_06 extends AppCompatActivity {
-    TextView 衛_氣喘內文_TV;
+    TextView 衛_新冠肺炎內文_TV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,12 +71,12 @@ public class edu_06 extends AppCompatActivity {
             }
         });
 
-        衛_氣喘內文_TV = findViewById(R.id.衛_新冠肺炎內文_TV);
+        衛_新冠肺炎內文_TV = findViewById(R.id.衛_新冠肺炎內文_TV);
         // 資料若超過頁面，須設定可以Scrolling
-        衛_氣喘內文_TV.setMovementMethod(ScrollingMovementMethod.getInstance());
+        衛_新冠肺炎內文_TV.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         // 讀取 raw folder 的檔案
-        InputStreamReader isr = new InputStreamReader(this.getResources().openRawResource(R.raw.air));
+        InputStreamReader isr = new InputStreamReader(this.getResources().openRawResource(R.raw.covid));
         BufferedReader br = new BufferedReader(isr);
         StringBuilder sb = new StringBuilder();
         String line;
@@ -89,6 +89,6 @@ public class edu_06 extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        衛_氣喘內文_TV.setText(sb.toString());
+        衛_新冠肺炎內文_TV.setText(sb.toString());
     }
 }
