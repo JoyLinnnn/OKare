@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Home">
-        <activity android:name=".Signin"></activity>
+        <activity android:name=".Register"></activity>
+        <activity android:name=".Signin" />
         <activity android:name=".Webview" />
         <activity android:name=".Homepage" />
         <activity android:name=".AdActivity" />
