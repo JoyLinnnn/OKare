@@ -1,6 +1,7 @@
 package com.example.home;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,12 +51,14 @@ public class DialogForm2 extends DialogFragment {
                     data.child("Medicine").child(cey).setValue(new ModelMedicine(MT, aMN)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(view.getContext(), "更新成功! ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(view.getContext(), "服藥資料更新成功! ", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(), Medicine.class));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(view.getContext(), "更新失敗! ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(view.getContext(), "服藥資料更新失敗! ", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(), Medicine.class));
                         }
                     });
                 }
