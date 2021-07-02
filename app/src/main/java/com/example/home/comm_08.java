@@ -36,6 +36,14 @@ public class comm_08 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 通_首頁_IB=findViewById(R.id.通_首頁_IB);
+        通_首頁_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(comm_08.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
         ImageButton 居_IB=findViewById(R.id.居_IB);
         居_IB.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -28,11 +28,20 @@ public class edu_09 extends AppCompatActivity {
                 Intent intent=new Intent(edu_09.this,noti.class);
                 startActivity(intent);
             }
-        });ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
+        });
+        ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(edu_09.this,Personal.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 通_首頁_IB=findViewById(R.id.通_首頁_IB);
+        通_首頁_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_09.this,Homepage.class);
                 startActivity(intent);
             }
         });

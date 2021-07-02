@@ -107,6 +107,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton _首頁_IB=findViewById(R.id._首頁_IB);
+        _首頁_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton 點擊查看_IB=findViewById(R.id.點擊查看_IB);
+        點擊查看_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Webview.class);
+                startActivity(intent);
+            }
+        });
 
 
         }

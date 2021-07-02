@@ -16,7 +16,6 @@
         <activity android:name=".Signin"></activity>
         <activity android:name=".Register" />
         <activity android:name=".Webview" />
-        <activity android:name=".Homepage" />
         <activity android:name=".AdActivity" />
         <activity android:name=".AdddActivity" />
         <activity android:name=".comm_09" />
@@ -44,7 +43,9 @@
         <activity android:name=".edu_03" />
         <activity android:name=".edu_02" />
         <activity android:name=".edu_01" />
-        <activity android:name=".edu_main">
+        <activity android:name=".edu_main"/>
+        <activity android:name=".Homepage" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

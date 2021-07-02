@@ -36,7 +36,8 @@ public class edu_01 extends AppCompatActivity {
                 Intent intent=new Intent(edu_01.this,noti.class);
                 startActivity(intent);
             }
-        });ImageButton _個人_IB=findViewById(R.id._個人_IB);
+        });
+        ImageButton _個人_IB=findViewById(R.id._個人_IB);
         _個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +45,16 @@ public class edu_01 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton _首頁_IB=findViewById(R.id._首頁_IB);
+        _首頁_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_01.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
+
+
         ImageButton 衛_居家檢測_IB=findViewById(R.id.衛_居家檢測_IB);
         衛_居家檢測_IB.setOnClickListener(new View.OnClickListener() {
             @Override
