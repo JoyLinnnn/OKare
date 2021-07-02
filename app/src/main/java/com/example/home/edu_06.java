@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
+import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -14,7 +19,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class edu_06 extends AppCompatActivity {
-    TextView 衛_新冠肺炎內文_TV;
+    TextView 衛_新冠肺炎內文_TV, textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,5 +95,23 @@ public class edu_06 extends AppCompatActivity {
         }
 
         衛_新冠肺炎內文_TV.setText(sb.toString());
+
+        textView = (TextView) findViewById(R.id.衛_新冠超連結_TV);
+        String webLinkText = "查看附近施打疫苗診所" ;
+        SpannableString 衛_新冠超連結_TV = new SpannableString(webLinkText);
+        NoUnderlineSpan mNoUnderlineSpan = new NoUnderlineSpan("https://antiflu.cdc.gov.tw/Covid19") ;
+        衛_新冠超連結_TV.setSpan(mNoUnderlineSpan,0,衛_新冠超連結_TV.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView.setText(衛_新冠超連結_TV);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+    public static class NoUnderlineSpan extends URLSpan {
+        public NoUnderlineSpan(String url) {
+            super(url);
+        }
+
+        @Override
+        public void updateDrawState(TextPaint ds) {
+            super.updateDrawState(ds);
+        }
     }
 }
