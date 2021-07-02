@@ -41,7 +41,7 @@ public class MedicalCard extends AppCompatActivity {
         setContentView(R.layout.activity_medical_card);
         提醒事項_IB=findViewById(R.id.提醒事項_IB);
         mFinish = findViewById(R.id.醫卡_完成按鈕_IB);
-        mModify = findViewById(R.id.醫卡_編輯按鈕_IB);
+/*        mModify = findViewById(R.id.醫卡_編輯按鈕_IB);*/
         mName = findViewById(R.id.醫卡_姓名輸入_ET);
         mGender = findViewById(R.id.醫卡_性別輸入_ET);
         mBloodtype = findViewById(R.id.醫卡_血型輸入_ET);

@@ -183,18 +183,6 @@
         app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
         app:srcCompat="@color/cardview_shadow_end_color" />
 
-    <ImageButton
-        android:id="@+id/醫卡_編輯按鈕_IB"
-        android:layout_width="66dp"
-        android:layout_height="50dp"
-        android:background="@drawable/_editbutton"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/醫卡_完成按鈕_IB"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
-        app:srcCompat="@color/cardview_shadow_end_color" />
-
     <TextView
         android:id="@+id/姓名"
         android:layout_width="wrap_content"
@@ -204,7 +192,7 @@
         app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintTop_toBottomOf="@+id/醫卡_編輯按鈕_IB" />
+        app:layout_constraintTop_toBottomOf="@+id/醫卡_完成按鈕_IB" />
 
     <TextView
         android:id="@+id/性別"
