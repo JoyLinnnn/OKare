@@ -96,7 +96,7 @@
     <ImageView
         android:id="@+id/醫_上白底_IV"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,7 +174,7 @@
     <ImageButton
         android:id="@+id/醫卡_完成按鈕_IB"
         android:layout_width="66dp"
-        android:layout_height="50dp"
+        android:layout_height="45dp"
         android:background="@drawable/_finishbutton"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
@@ -484,6 +484,7 @@
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="phone"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET"
         app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
         app:layout_constraintStart_toEndOf="@+id/One電話"
@@ -495,6 +496,7 @@
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="phone"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人2姓名輸入_ET"
         app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1電話輸入_ET"
         app:layout_constraintStart_toEndOf="@+id/Two電話"
