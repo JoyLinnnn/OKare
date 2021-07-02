@@ -5,552 +5,552 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MedicalCard">
-
-    <ImageView
-        android:id="@+id/衛_OKare_IV"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="72dp"
-        android:background="@color/upcolor"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_up" />
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/衛_OKare_IV">
-
-        <ImageButton
-            android:id="@+id/居_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/_homeyellow"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_homeyellow" />
-
-        <ImageButton
-            android:id="@+id/醫_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/_greenmdc"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_greenmdc" />
-
-        <ImageButton
-            android:id="@+id/預_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/_up4"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_up3" />
-
-        <ImageButton
-            android:id="@+id/即_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/_up5"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_up4" />
-
-        <ImageButton
-            android:id="@+id/衛_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/_up5"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_up5" />
-
-        <ImageButton
-            android:id="@+id/飲_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/_up6"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_up6" />
-
-    </LinearLayout>
-
-
-    <ImageView
-        android:id="@+id/醫_上白底_IV"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/_whrectangle" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/醫_上白底_IV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        android:layout_height="wrap_content"
+        tools:context=".MedicalCard">
 
         <ImageView
-            android:id="@+id/醫療小卡LOGO_IV"
+            android:id="@+id/衛_OKare_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="@color/upcolor"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/_up" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/衛_OKare_IV">
+
+            <ImageButton
+                android:id="@+id/居_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/_homeyellow"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_homeyellow" />
+
+            <ImageButton
+                android:id="@+id/醫_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/_greenmdc"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_greenmdc" />
+
+            <ImageButton
+                android:id="@+id/預_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/_up4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_up3" />
+
+            <ImageButton
+                android:id="@+id/即_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/_up5"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_up4" />
+
+            <ImageButton
+                android:id="@+id/衛_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/_up5"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_up5" />
+
+            <ImageButton
+                android:id="@+id/飲_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/_up6"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_up6" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/醫_上白底_IV"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/_whrectangle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/醫_上白底_IV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/醫療小卡LOGO_IV"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/_iconmdc" />
+
+            <ImageButton
+                android:id="@+id/醫療小卡_IB"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/cardview_shadow_end_color"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_mdcline" />
+
+            <ImageView
+                android:id="@+id/提醒事項LOGO_IV"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/_iconnoti" />
+
+            <ImageButton
+                android:id="@+id/提醒事項_IB"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/cardview_shadow_end_color"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/_noti" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/醫_中深黃底_IV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/_iconmdc" />
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_ciryellow"
+            app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/_ciryellow" />
 
         <ImageButton
-            android:id="@+id/醫療小卡_IB"
-            android:layout_width="55dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="@color/cardview_shadow_end_color"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_mdcline" />
+            android:id="@+id/醫卡_完成按鈕_IB"
+            android:layout_width="66dp"
+            android:layout_height="45dp"
+            android:background="@drawable/_finishbutton"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
+            app:srcCompat="@color/cardview_shadow_end_color" />
+
+        <TextView
+            android:id="@+id/姓名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintTop_toBottomOf="@+id/醫卡_完成按鈕_IB" />
+
+        <TextView
+            android:id="@+id/性別"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="性別"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/姓名" />
+
+        <TextView
+            android:id="@+id/血型"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="血型"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/性別" />
+
+        <TextView
+            android:id="@+id/住址"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="住址"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/血型" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/住址" />
+
+        <TextView
+            android:id="@+id/藥物過敏"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="藥物過敏"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/重大病史"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="重大病史"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/藥物過敏" />
+
+        <TextView
+            android:id="@+id/緊急聯絡人資訊"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="緊急聯絡人資訊"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/重大病史" />
+
+        <TextView
+            android:id="@+id/One姓名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 姓名"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人資訊" />
+
+        <TextView
+            android:id="@+id/Two姓名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"
+            android:text="2 姓名"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintStart_toStartOf="@+id/姓名"
+            app:layout_constraintTop_toBottomOf="@+id/One姓名" />
 
         <ImageView
-            android:id="@+id/提醒事項LOGO_IV"
+            android:id="@+id/姓名格"
             android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/_iconnoti" />
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/_whblaline"
+            app:layout_constraintBottom_toTopOf="@+id/性別"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/姓名"
+            app:layout_constraintTop_toTopOf="@+id/姓名"
+            app:srcCompat="?android:attr/panelBackground" />
 
-        <ImageButton
-            android:id="@+id/提醒事項_IB"
-            android:layout_width="55dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:background="@color/cardview_shadow_end_color"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_noti" />
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/性別格"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/_whblaline"
+            app:layout_constraintBottom_toTopOf="@+id/血型"
+            app:layout_constraintEnd_toEndOf="@+id/姓名格"
+            app:layout_constraintStart_toStartOf="@+id/姓名格"
+            app:layout_constraintTop_toTopOf="@+id/性別"
+            app:srcCompat="?android:attr/panelBackground" />
 
-    <ImageView
-        android:id="@+id/醫_中深黃底_IV"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/_ciryellow"
-        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/_ciryellow" />
+        <ImageView
+            android:id="@+id/血型格"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/_whblaline"
+            app:layout_constraintBottom_toTopOf="@+id/住址"
+            app:layout_constraintEnd_toEndOf="@+id/性別格"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/性別格"
+            app:layout_constraintTop_toTopOf="@+id/血型"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="?android:attr/panelBackground" />
 
-    <ImageButton
-        android:id="@+id/醫卡_完成按鈕_IB"
-        android:layout_width="66dp"
-        android:layout_height="45dp"
-        android:background="@drawable/_finishbutton"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
-        app:srcCompat="@color/cardview_shadow_end_color" />
+        <ImageView
+            android:id="@+id/住址格"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/_whblaline"
+            app:layout_constraintBottom_toTopOf="@+id/藥物過敏"
+            app:layout_constraintEnd_toEndOf="@+id/血型格"
+            app:layout_constraintStart_toStartOf="@+id/住址"
+            app:layout_constraintTop_toBottomOf="@+id/住址"
+            app:srcCompat="?android:attr/panelBackground" />
 
-    <TextView
-        android:id="@+id/姓名"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="姓名"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintTop_toBottomOf="@+id/醫卡_完成按鈕_IB" />
+        <ImageView
+            android:id="@+id/藥物格"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/_whblaline"
+            app:layout_constraintBottom_toTopOf="@+id/重大病史"
+            app:layout_constraintEnd_toEndOf="@+id/姓名格"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/藥物過敏"
+            app:layout_constraintTop_toBottomOf="@+id/住址格"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="?attr/selectableItemBackground" />
 
-    <TextView
-        android:id="@+id/性別"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="性別"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/姓名" />
+        <ImageView
+            android:id="@+id/病史格"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/_whblaline"
+            app:layout_constraintBottom_toTopOf="@+id/緊急聯絡人資訊"
+            app:layout_constraintEnd_toEndOf="@+id/藥物格"
+            app:layout_constraintStart_toStartOf="@+id/藥物格"
+            app:layout_constraintTop_toBottomOf="@+id/藥物格"
+            app:srcCompat="?attr/selectableItemBackground" />
 
-    <TextView
-        android:id="@+id/血型"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="血型"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/性別" />
+        <EditText
+            android:id="@+id/醫卡_姓名輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/姓名格"
+            app:layout_constraintEnd_toEndOf="@+id/姓名格"
+            app:layout_constraintStart_toStartOf="@+id/姓名格"
+            app:layout_constraintTop_toTopOf="@+id/姓名格" />
 
-    <TextView
-        android:id="@+id/住址"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="住址"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/血型" />
+        <EditText
+            android:id="@+id/醫卡_性別輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/性別格"
+            app:layout_constraintEnd_toEndOf="@+id/性別格"
+            app:layout_constraintStart_toStartOf="@+id/性別格"
+            app:layout_constraintTop_toBottomOf="@+id/姓名格" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/住址" />
+        <EditText
+            android:id="@+id/醫卡_血型輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/血型格"
+            app:layout_constraintEnd_toEndOf="@+id/血型格"
+            app:layout_constraintStart_toStartOf="@+id/血型格"
+            app:layout_constraintTop_toTopOf="@+id/血型格" />
 
-    <TextView
-        android:id="@+id/藥物過敏"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="藥物過敏"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        <EditText
+            android:id="@+id/醫卡_住址輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/住址格"
+            app:layout_constraintEnd_toEndOf="@+id/住址格"
+            app:layout_constraintStart_toStartOf="@+id/住址格"
+            app:layout_constraintTop_toTopOf="@+id/住址格" />
 
-    <TextView
-        android:id="@+id/重大病史"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="重大病史"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/藥物過敏" />
+        <EditText
+            android:id="@+id/醫卡_藥物過敏輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/藥物格"
+            app:layout_constraintEnd_toEndOf="@+id/藥物格"
+            app:layout_constraintStart_toStartOf="@+id/藥物格"
+            app:layout_constraintTop_toTopOf="@+id/藥物格" />
 
-    <TextView
-        android:id="@+id/緊急聯絡人資訊"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="緊急聯絡人資訊"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/重大病史" />
+        <EditText
+            android:id="@+id/醫卡_病史輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/病史格"
+            app:layout_constraintEnd_toEndOf="@+id/病史格"
+            app:layout_constraintStart_toStartOf="@+id/病史格"
+            app:layout_constraintTop_toBottomOf="@+id/藥物格" />
 
-    <TextView
-        android:id="@+id/One姓名"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1 姓名"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人資訊" />
+        <EditText
+            android:id="@+id/醫卡_聯絡人1姓名輸入_ET"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/Two姓名"
+            app:layout_constraintStart_toEndOf="@+id/One姓名"
+            app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人資訊"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/Two姓名"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="3dp"
-        android:text="2 姓名"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintStart_toStartOf="@+id/姓名"
-        app:layout_constraintTop_toBottomOf="@+id/One姓名" />
+        <EditText
+            android:id="@+id/醫卡_聯絡人2姓名輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+            app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1姓名輸入_ET"
+            app:layout_constraintStart_toEndOf="@+id/Two姓名"
+            app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET" />
 
-    <ImageView
-        android:id="@+id/姓名格"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/_whblaline"
-        app:layout_constraintBottom_toTopOf="@+id/性別"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/姓名"
-        app:layout_constraintTop_toTopOf="@+id/姓名"
-        app:srcCompat="?android:attr/panelBackground" />
-
-    <ImageView
-        android:id="@+id/性別格"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/_whblaline"
-        app:layout_constraintBottom_toTopOf="@+id/血型"
-        app:layout_constraintEnd_toEndOf="@+id/姓名格"
-        app:layout_constraintStart_toStartOf="@+id/姓名格"
-        app:layout_constraintTop_toTopOf="@+id/性別"
-        app:srcCompat="?android:attr/panelBackground" />
-
-    <ImageView
-        android:id="@+id/血型格"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/_whblaline"
-        app:layout_constraintBottom_toTopOf="@+id/住址"
-        app:layout_constraintEnd_toEndOf="@+id/性別格"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/性別格"
-        app:layout_constraintTop_toTopOf="@+id/血型"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="?android:attr/panelBackground" />
-
-    <ImageView
-        android:id="@+id/住址格"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/_whblaline"
-        app:layout_constraintBottom_toTopOf="@+id/藥物過敏"
-        app:layout_constraintEnd_toEndOf="@+id/血型格"
-        app:layout_constraintStart_toStartOf="@+id/住址"
-        app:layout_constraintTop_toBottomOf="@+id/住址"
-        app:srcCompat="?android:attr/panelBackground" />
-
-    <ImageView
-        android:id="@+id/藥物格"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:background="@drawable/_whblaline"
-        app:layout_constraintBottom_toTopOf="@+id/重大病史"
-        app:layout_constraintEnd_toEndOf="@+id/姓名格"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/藥物過敏"
-        app:layout_constraintTop_toBottomOf="@+id/住址格"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="?attr/selectableItemBackground" />
-
-    <ImageView
-        android:id="@+id/病史格"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/_whblaline"
-        app:layout_constraintBottom_toTopOf="@+id/緊急聯絡人資訊"
-        app:layout_constraintEnd_toEndOf="@+id/藥物格"
-        app:layout_constraintStart_toStartOf="@+id/藥物格"
-        app:layout_constraintTop_toBottomOf="@+id/藥物格"
-        app:srcCompat="?attr/selectableItemBackground" />
-
-    <EditText
-        android:id="@+id/醫卡_姓名輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/姓名格"
-        app:layout_constraintEnd_toEndOf="@+id/姓名格"
-        app:layout_constraintStart_toStartOf="@+id/姓名格"
-        app:layout_constraintTop_toTopOf="@+id/姓名格" />
-
-    <EditText
-        android:id="@+id/醫卡_性別輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/性別格"
-        app:layout_constraintEnd_toEndOf="@+id/性別格"
-        app:layout_constraintStart_toStartOf="@+id/性別格"
-        app:layout_constraintTop_toBottomOf="@+id/姓名格" />
-
-    <EditText
-        android:id="@+id/醫卡_血型輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/血型格"
-        app:layout_constraintEnd_toEndOf="@+id/血型格"
-        app:layout_constraintStart_toStartOf="@+id/血型格"
-        app:layout_constraintTop_toTopOf="@+id/血型格" />
-
-    <EditText
-        android:id="@+id/醫卡_住址輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/住址格"
-        app:layout_constraintEnd_toEndOf="@+id/住址格"
-        app:layout_constraintStart_toStartOf="@+id/住址格"
-        app:layout_constraintTop_toTopOf="@+id/住址格" />
-
-    <EditText
-        android:id="@+id/醫卡_藥物過敏輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/藥物格"
-        app:layout_constraintEnd_toEndOf="@+id/藥物格"
-        app:layout_constraintStart_toStartOf="@+id/藥物格"
-        app:layout_constraintTop_toTopOf="@+id/藥物格" />
-
-    <EditText
-        android:id="@+id/醫卡_病史輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/病史格"
-        app:layout_constraintEnd_toEndOf="@+id/病史格"
-        app:layout_constraintStart_toStartOf="@+id/病史格"
-        app:layout_constraintTop_toBottomOf="@+id/藥物格" />
-
-    <EditText
-        android:id="@+id/醫卡_聯絡人1姓名輸入_ET"
-        android:layout_width="100dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/Two姓名"
-        app:layout_constraintStart_toEndOf="@+id/One姓名"
-        app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人資訊"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/醫卡_聯絡人2姓名輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
-        app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1姓名輸入_ET"
-        app:layout_constraintStart_toEndOf="@+id/Two姓名"
-        app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET" />
-
-    <TextView
-        android:id="@+id/One電話"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="電話"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/One姓名"
-        app:layout_constraintStart_toEndOf="@+id/醫卡_聯絡人1姓名輸入_ET"
-        app:layout_constraintTop_toTopOf="@+id/One姓名" />
-
-    <TextView
-        android:id="@+id/Two電話"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="電話"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/Two姓名"
-        app:layout_constraintEnd_toEndOf="@+id/One電話"
-        app:layout_constraintStart_toStartOf="@+id/One電話"
-        app:layout_constraintTop_toTopOf="@+id/Two姓名" />
-
-    <EditText
-        android:id="@+id/醫卡_聯絡人1電話輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET"
-        app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintStart_toEndOf="@+id/One電話"
-        app:layout_constraintTop_toTopOf="@+id/醫卡_聯絡人1姓名輸入_ET" />
-
-    <EditText
-        android:id="@+id/醫卡_聯絡人2電話輸入_ET"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人2姓名輸入_ET"
-        app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1電話輸入_ET"
-        app:layout_constraintStart_toEndOf="@+id/Two電話"
-        app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1電話輸入_ET" />
-
-
-    <ImageView
-        android:id="@+id/通_藍底_IV"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@drawable/_downblue"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/_downblue" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/通_通知_IB"
+        <TextView
+            android:id="@+id/One電話"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down1" />
+            android:layout_marginStart="5dp"
+            android:text="電話"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/One姓名"
+            app:layout_constraintStart_toEndOf="@+id/醫卡_聯絡人1姓名輸入_ET"
+            app:layout_constraintTop_toTopOf="@+id/One姓名" />
 
-        <ImageButton
-            android:id="@+id/通_首頁_IB"
+        <TextView
+            android:id="@+id/Two電話"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="電話"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Two姓名"
+            app:layout_constraintEnd_toEndOf="@+id/One電話"
+            app:layout_constraintStart_toStartOf="@+id/One電話"
+            app:layout_constraintTop_toTopOf="@+id/Two姓名" />
+
+        <EditText
+            android:id="@+id/醫卡_聯絡人1電話輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintStart_toEndOf="@+id/One電話"
+            app:layout_constraintTop_toTopOf="@+id/醫卡_聯絡人1姓名輸入_ET" />
+
+        <EditText
+            android:id="@+id/醫卡_聯絡人2電話輸入_ET"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人2姓名輸入_ET"
+            app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1電話輸入_ET"
+            app:layout_constraintStart_toEndOf="@+id/Two電話"
+            app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1電話輸入_ET" />
+
+
+        <ImageView
+            android:id="@+id/通_藍底_IV"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down2" />
+            android:layout_height="50dp"
+            android:background="@drawable/_downblue"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/_downblue" />
 
-        <ImageButton
-            android:id="@+id/通_個人_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down3" />
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/通_通知_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/_down1" />
+
+            <ImageButton
+                android:id="@+id/通_首頁_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/_down2" />
+
+            <ImageButton
+                android:id="@+id/通_個人_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/_down3" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
