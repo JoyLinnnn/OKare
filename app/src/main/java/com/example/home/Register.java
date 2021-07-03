@@ -5,16 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.example.home.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -26,6 +25,8 @@ import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
+
+//import com.example.home.databinding.ActivityMainBinding;
 
 public class Register extends AppCompatActivity {
 
@@ -149,27 +150,46 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String inputPassword = ePassword.getText().toString();
-                String inputCheck = eCheck.getText().toString();
-                String inputEmail = eEmail.getText().toString();
-                String inputPhone = ePhone.getText().toString();
+                String password = ePassword.getText().toString();
+                String Check = eCheck.getText().toString();
+                String Email = eEmail.getText().toString();
+                String Phone = ePhone.getText().toString();
+                String send=eSend.getText().toString();
                 //驗證碼還沒做
                 mAuth.createUserWithEmailAndPassword(eEmail.getText().toString(), ePassword.getText().toString()).addOnCompleteListener(context, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (inputPassword.isEmpty() || inputCheck.isEmpty() || inputEmail.isEmpty() || inputPhone.isEmpty()) {  //檢查資料是否完整
-                            Toast.makeText(Register.this, "請輸入完整訊息", Toast.LENGTH_SHORT).show();
-                        } else {
-                            if (inputPassword.length() < 6 || inputPassword.length() > 8) {  //檢查密碼格式
-                                Toast.makeText(Register.this, "密碼請輸入6~8個英數字元", Toast.LENGTH_SHORT).show();
-                            } else {
-                                if (eCheck == ePassword) {  //檢查密碼是否相同
-                                    Toast.makeText(Register.this, "註冊成功", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(Register.this, "請輸入相同密碼", Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
+                        if(TextUtils.isEmpty(Email)){
+                            eEmail.setError("請輸入email");
+                            return;
+                        }
+                        else if(TextUtils.isEmpty(password)){
+                            ePassword.setError("請輸入密碼");
+                            return;
+                        }
+                        else if(TextUtils.isEmpty(Check)){
+                            ePassword.setError("請輸入密碼");
+                            return;
+                        }
+                        else if(!password.equals(Check)){
+                            ePassword.setError("請輸入相同密碼");
+                            return;
+                        }
+                        else if(password.length()<4){
+                            ePassword.setError("密碼請大於4個字元");
+                            return;
+                        }
+                        else if(!isVallidEmail(Email)){
+                            eEmail.setError("無效的email");
+                            return;
+                        }
+                        else if(TextUtils.isEmpty(Phone)){
+                            ePhone.setError("請輸入手機號碼");
+                            return;
+                        }
+                        else if(TextUtils.isEmpty(send)){
+                            eSend.setError("請輸入驗證碼");
+                            return;
                         }
                         Intent intent = new Intent(Register.this, Signin.class);
                         startActivity(intent);  //回到登入
@@ -228,6 +248,9 @@ public class Register extends AppCompatActivity {
                         Toast.makeText(Register.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+    private Boolean isVallidEmail(CharSequence target){
+        return(!TextUtils.isEmpty(target)&& Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 
 }
