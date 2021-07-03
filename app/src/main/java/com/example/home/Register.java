@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -58,7 +59,18 @@ public class Register extends AppCompatActivity {
         eResend = findViewById(R.id.btn_Resend_register);
         eCodeSubmit=findViewById(R.id.btn_codeSubmit_register);
 
+
+        Button btn_finfsh_register=findViewById(R.id.btn_finfsh_register);
+        btn_finfsh_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Register.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
+
         mCallbacks= new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                 // This callback will be invoked in two situations:

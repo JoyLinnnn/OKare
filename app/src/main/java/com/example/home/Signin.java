@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,24 @@ public class Signin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+
+        ImageButton 註冊_IB=findViewById(R.id.註冊_IB);
+        註冊_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Signin.this,Register.class);
+                startActivity(intent);
+            }
+        });
+        Button btn_login=findViewById(R.id.btn_login);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Signin.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
+
 
         ePhone=findViewById(R.id.et_phone);
         eEmail=findViewById(R.id.et_email);
