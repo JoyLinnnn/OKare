@@ -24,10 +24,10 @@
         android:id="@+id/imageView19"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/signin2"
-        android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/signin2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04000002"
-        app:srcCompat="@drawable/okare1" />
+        app:srcCompat="@drawable/aaa2" />
 
     <ImageView
         android:id="@+id/phone_back"
@@ -253,5 +253,17 @@
         app:layout_constraintStart_toStartOf="@+id/註冊_IB"
         app:layout_constraintTop_toBottomOf="@+id/註冊_IB"
         app:srcCompat="@drawable/btn_click" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/aaa1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@color/coffee_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
