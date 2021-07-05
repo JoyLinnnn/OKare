@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Signin extends AppCompatActivity {
 
     private EditText ePhone, ePassword, eEmail;
+    private TextView editTextTextPersonName;
     private Button eLogin;
     private ImageButton 註冊_IB;
     private TextView ekeepLogin, etoRegister, etoForgot;
@@ -36,6 +37,7 @@ public class Signin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+        
 
         註冊_IB = findViewById(R.id.註冊_IB);
         註冊_IB.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +67,7 @@ public class Signin extends AppCompatActivity {
         eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Login();
             }
         });
