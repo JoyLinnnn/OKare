@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -29,11 +30,12 @@ import java.util.Map;
 
 public class Personal extends AppCompatActivity {
     private Context context = this;
-    private ImageButton mFinish;
+    private ImageButton mFinish,mSignout;
     private ImageButton 通_通知_IB,通_個人_IB;
     private EditText mName, mPassword, mPhone;
     private TextView 帳戶名稱;
     private FirebaseFirestore db;
+    FirebaseAuth mAuth;
     private String x_last = "0";
     private String x_select = "0";
 
@@ -49,9 +51,10 @@ public class Personal extends AppCompatActivity {
         mPassword = findViewById(R.id.個_密碼輸入_ET);
         mPhone = findViewById(R.id.個_手機輸入_ET);
         帳戶名稱=findViewById(R.id.個_上方帳戶名稱_TV);
+        mSignout=findViewById(R.id.個_編輯按紐_IB);
 
         db = FirebaseFirestore.getInstance();
-
+        mAuth=FirebaseAuth.getInstance();
         mFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +78,14 @@ public class Personal extends AppCompatActivity {
                     }
                 });
                 data_select();
+            }
+        });
+
+        mSignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                signOutUser();
             }
         });
 
@@ -103,6 +114,14 @@ public class Personal extends AppCompatActivity {
             }
         });
     }
+
+    private void signOutUser() {
+        Intent mainActivity =new Intent(Personal.this,Signin.class);
+        mainActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainActivity);
+        finish();
+    }
+
 
     private void data_select() {
         CollectionReference CR = db.collection("Personal");

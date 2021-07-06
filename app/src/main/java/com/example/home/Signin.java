@@ -17,9 +17,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Signin extends AppCompatActivity {
 
+    public static String PREFS_NAME="MyPrefsFile";
     private EditText ePhone, ePassword, eEmail;
     private TextView editTextTextPersonName;
     private Button eLogin;
@@ -32,12 +34,15 @@ public class Signin extends AppCompatActivity {
     boolean isValid=false;
     private int counter=5;
     FirebaseAuth firebaseAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        
+        mAuth=FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(Signin.this, MainActivity.class));
+            finish();
+        }
 
         註冊_IB = findViewById(R.id.註冊_IB);
         註冊_IB.setOnClickListener(new View.OnClickListener() {
@@ -67,10 +72,11 @@ public class Signin extends AppCompatActivity {
         eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Login();
             }
         });
+
+
     }
 
     private boolean validate(String name, String password){
@@ -96,7 +102,9 @@ public class Signin extends AppCompatActivity {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if(task.isSuccessful())
+                        {
+                            FirebaseUser user=mAuth.getCurrentUser();
                             Toast.makeText(Signin.this,"登入成功",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Signin.this, Homepage.class);
                             startActivity(intent);
@@ -104,6 +112,7 @@ public class Signin extends AppCompatActivity {
                         }else{
                             Toast.makeText(Signin.this,"登入失敗",Toast.LENGTH_SHORT).show();
                         }
+
                     }
                 });
     }
