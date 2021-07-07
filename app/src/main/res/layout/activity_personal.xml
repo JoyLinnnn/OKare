@@ -59,12 +59,12 @@
     <ImageView
         android:id="@+id/個人中心上層_IV"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@color/upcolor"
+        android:layout_height="120dp"
+        android:background="@drawable/adperson"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_up" />
+        app:srcCompat="@color/coffee_color" />
 
     <ImageView
         android:id="@+id/個_中淺黃底_IV"
@@ -78,39 +78,20 @@
         app:layout_constraintTop_toBottomOf="@+id/個人中心上層_IV"
         app:srcCompat="@drawable/_yellowbbgg" />
 
-    <ImageButton
-        android:id="@+id/個_完成按鈕_IB"
-        android:layout_width="95dp"
-        android:layout_height="58dp"
-        android:background="@drawable/_bluefinish"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/個人中心上層_IV"
-        app:srcCompat="@android:color/transparent" />
-
-    <ImageButton
-        android:id="@+id/個_編輯按紐_IB"
-        android:layout_width="95dp"
-        android:layout_height="58dp"
-        android:background="@drawable/_blueedit"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/個_完成按鈕_IB"
-        app:layout_constraintTop_toBottomOf="@+id/個人中心上層_IV"
-        app:srcCompat="@android:color/transparent" />
-
     <ImageView
         android:id="@+id/個_中深黃底_IV"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/_ciryellow"
-        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintBottom_toTopOf="@+id/個_編輯按紐_IB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/個_編輯按紐_IB"
+        app:layout_constraintTop_toBottomOf="@+id/個人中心上層_IV"
         app:layout_constraintVertical_bias="0.452"
         app:srcCompat="@drawable/_ciryellow" />
 
@@ -206,5 +187,29 @@
         app:layout_constraintEnd_toEndOf="@+id/個_手機號碼格子_IV"
         app:layout_constraintStart_toStartOf="@+id/個_手機號碼格子_IV"
         app:layout_constraintTop_toTopOf="@+id/個_手機號碼格子_IV" />
+
+    <ImageButton
+        android:id="@+id/個_編輯按紐_IB"
+        android:layout_width="95dp"
+        android:layout_height="58dp"
+        android:background="@drawable/adout"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/個_完成按鈕_IB"
+        android:layout_width="95dp"
+        android:layout_height="58dp"
+        android:background="@drawable/adfinish"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:color/transparent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
