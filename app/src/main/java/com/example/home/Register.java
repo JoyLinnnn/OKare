@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.concurrent.TimeUnit;
 
@@ -43,6 +44,7 @@ public class Register extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private static final String TAG ="MAIN_TAG";
+    private DatabaseReference databaseReference;
 
 
     @Override
@@ -150,11 +152,11 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String password = ePassword.getText().toString();
-                String Check = eCheck.getText().toString();
-                String Email = eEmail.getText().toString();
-                String Phone = ePhone.getText().toString();
-                String send=eSend.getText().toString();
+                final String password = ePassword.getText().toString();
+                final String Check = eCheck.getText().toString();
+                final String Email = eEmail.getText().toString();
+                final String Phone = ePhone.getText().toString();
+                final String send=eSend.getText().toString();
                 //驗證碼還沒做
                 mAuth.createUserWithEmailAndPassword(eEmail.getText().toString(), ePassword.getText().toString()).addOnCompleteListener(context, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -252,5 +254,39 @@ public class Register extends AppCompatActivity {
     private Boolean isVallidEmail(CharSequence target){
         return(!TextUtils.isEmpty(target)&& Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
+
+    /*private void register(String email,String password,String Check,String Phone,String send ){
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    FirebaseUser rUser=mAuth.getCurrentUser();
+                    String userId=rUser.getUid();
+                    databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
+                    HashMap<String,String> hashMap= new HashMap<>();
+                    hashMap.put("userId",userId);
+                    hashMap.put("email",email);
+                    hashMap.put("password",password);
+                    hashMap.put("Check",Check);
+                    hashMap.put("Phone",Phone);
+                    hashMap.put("send",send);
+                    databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Intent intent= new Intent(Register.this,Homepage.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }else{
+                                Toast.makeText(Register.this, Objects.requireNonNull(task.getException()).getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }else{
+                    Toast.makeText(Register.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        })
+    }*/
 
 }

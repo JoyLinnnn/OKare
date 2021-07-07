@@ -53,12 +53,18 @@ public class Signin extends AppCompatActivity {
             }
         });
         eLogin = findViewById(R.id.btn_login);
-        eLogin.setOnClickListener(new View.OnClickListener() {
+        /*eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String email=eEmail.getText().toString();
+                String password=ePassword.getText().toString();
+                if(TextUtils.isEmpty(email)||TextUtils.isEmpty(password)){
+                    Toast.makeText(Signin.this,"all fields required",Toast.LENGTH_SHORT).show();
+                }else{
+                    login(email,password);
+                }
             }
-        });
+        });*/
 
 
    //     ePhone = findViewById(R.id.et_phone);
@@ -77,6 +83,25 @@ public class Signin extends AppCompatActivity {
         });
 
 
+    }
+
+    private void login(String email, String password) {
+        mAuth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            FirebaseUser user=mAuth.getCurrentUser();
+                            Toast.makeText(Signin.this,"登入成功",Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(Signin.this, Homepage.class);
+                            startActivity(intent);
+                            finish();
+                        }else{
+                            Toast.makeText(Signin.this,"登入失敗",Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
     }
 
     private boolean validate(String name, String password){
