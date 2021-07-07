@@ -50,7 +50,7 @@ public class Personal extends AppCompatActivity {
         mName = findViewById(R.id.個_帳號輸入_ET);
         mPassword = findViewById(R.id.個_密碼輸入_ET);
         mPhone = findViewById(R.id.個_手機輸入_ET);
-        帳戶名稱=findViewById(R.id.個_上方帳戶名稱_TV);
+  //       帳戶名稱=findViewById(R.id.個_上方帳戶名稱_TV);
         mSignout=findViewById(R.id.個_編輯按紐_IB);
 
         db = FirebaseFirestore.getInstance();
@@ -80,6 +80,8 @@ public class Personal extends AppCompatActivity {
                 data_select();
             }
         });
+
+
 
         mSignout.setOnClickListener(new View.OnClickListener() {
             @Override

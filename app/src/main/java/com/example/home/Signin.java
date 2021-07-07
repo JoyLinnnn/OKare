@@ -61,7 +61,7 @@ public class Signin extends AppCompatActivity {
         });
 
 
-        ePhone = findViewById(R.id.et_phone);
+   //     ePhone = findViewById(R.id.et_phone);
         eEmail = findViewById(R.id.et_email);
         ePassword = findViewById(R.id.et_password);
         eLogin = findViewById(R.id.btn_login);

@@ -59,12 +59,12 @@
     <ImageView
         android:id="@+id/個人中心上層_IV"
         android:layout_width="0dp"
-        android:layout_height="158dp"
+        android:layout_height="100dp"
         android:background="@color/upcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_personup" />
+        app:srcCompat="@drawable/_up" />
 
     <ImageView
         android:id="@+id/個_中淺黃底_IV"
@@ -173,18 +173,6 @@
         app:layout_constraintStart_toStartOf="@+id/個_手機號碼文字_TV"
         app:layout_constraintTop_toBottomOf="@+id/個_密碼格子_IV"
         app:srcCompat="@drawable/_whblaline" />
-
-    <TextView
-        android:id="@+id/個_上方帳戶名稱_TV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="帳戶名稱"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="@+id/個人中心上層_IV"
-        app:layout_constraintHorizontal_bias="0.383"
-        app:layout_constraintStart_toStartOf="@+id/個人中心上層_IV"
-        app:layout_constraintTop_toTopOf="@+id/個人中心上層_IV" />
 
     <EditText
         android:id="@+id/個_帳號輸入_ET"

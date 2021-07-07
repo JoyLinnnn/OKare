@@ -47,40 +47,15 @@
         app:srcCompat="@drawable/aaa2" />
 
     <ImageView
-        android:id="@+id/phone_back"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_OKare"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/white_back" />
-
-    <ImageView
-        android:id="@+id/ic_phone"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/phone_back"
-        app:layout_constraintEnd_toStartOf="@+id/et_phone"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/phone_back"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/phone" />
-
-    <ImageView
         android:id="@+id/username_back"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_line"
+        app:layout_constraintTop_toBottomOf="@+id/ic_OKare"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/white_back" />
 
@@ -101,7 +76,7 @@
         android:id="@+id/password_back"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,51 +108,34 @@
         app:layout_constraintTop_toTopOf="@+id/tv_keeplogin"
         app:srcCompat="@drawable/check" />
 
-    <EditText
-        android:id="@+id/et_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="輸入手機"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_OKare"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/ic_line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_phone"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line" />
 
     <EditText
         android:id="@+id/et_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="輸入email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_line"
+        app:layout_constraintTop_toBottomOf="@+id/ic_OKare"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/et_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="輸入密碼"
         android:inputType="textPassword"
@@ -220,7 +178,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="24dp"
         android:text="尚未成為會員?"
         app:layout_constraintBottom_toBottomOf="@+id/註冊_IB"
         app:layout_constraintStart_toStartOf="parent"
@@ -241,6 +199,7 @@
         android:layout_width="56dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/coffee_color"
         android:scaleType="fitXY"
         app:layout_constraintStart_toEndOf="@+id/tv_toregister"
@@ -268,5 +227,16 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/okaree" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
