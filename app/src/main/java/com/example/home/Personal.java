@@ -14,21 +14,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Personal extends AppCompatActivity {
     private Context context = this;
@@ -54,9 +46,7 @@ public class Personal extends AppCompatActivity {
         mName = findViewById(R.id.個_帳號輸入_ET);
         mPassword = findViewById(R.id.個_密碼輸入_ET);
         mPhone = findViewById(R.id.個_手機輸入_ET);
-  //       帳戶名稱=findViewById(R.id.個_上方帳戶名稱_TV);
         mSignout=findViewById(R.id.個_編輯按紐_IB);
-        //root=FirebaseDatabase.getInstance().getReference().child(mAuth.getUid());
         db = FirebaseFirestore.getInstance();
         mAuth=FirebaseAuth.getInstance();
         firebaseUser=mAuth.getCurrentUser();
@@ -64,30 +54,19 @@ public class Personal extends AppCompatActivity {
         mFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Map<String, Object> text_data = new HashMap<>();
-                text_data.put("姓名", mName.getText().toString());
-                text_data.put("密碼", mPassword.getText().toString());
-                text_data.put("手機", mPhone.getText().toString());
-                帳戶名稱.setText(mName.getText().toString().trim());
-                Integer x_id = Integer.valueOf(x_last) + 1;
-                db.collection("Personal").document(String.valueOf(x_id)).set(text_data)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(Personal.this, "新增成功", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Personal.this, "新增失敗", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                data_select();
+                String name=mName.getText().toString();
+                String password=mPassword.getText().toString();
+                String phone=mPhone.getText().toString();
+                if(name.isEmpty()||password.isEmpty()||phone.isEmpty()){
+                    Toast.makeText(Personal.this,"All fields are required",Toast.LENGTH_SHORT).show();
+                }else if(!phone.equals(password)){
+                    Toast.makeText(Personal.this,"確認密碼相同",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    changePassword(name,password);
+                }
             }
         });
-
-
 
         mSignout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +102,32 @@ public class Personal extends AppCompatActivity {
         });
     }
 
+    private void changePassword(String name, String password) {
+        AuthCredential credential= EmailAuthProvider.getCredential(firebaseUser.getEmail(),name);
+        firebaseUser.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    firebaseUser.updatePassword(password).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                mAuth.signOut();
+                                Intent intent = new Intent(Personal.this,Signin.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }else{
+                                Toast.makeText(Personal.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }else{
+                    Toast.makeText(Personal.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
     private void signOutUser() {
         Intent mainActivity =new Intent(Personal.this,Signin.class);
         mainActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -131,7 +136,7 @@ public class Personal extends AppCompatActivity {
     }
 
 
-    private void data_select() {
+    /*private void data_select() {
         CollectionReference CR = db.collection("Personal");
         final List<Map<String, Object>> items = new ArrayList<Map<String, Object>>();
         CR.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -148,5 +153,5 @@ public class Personal extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
 }

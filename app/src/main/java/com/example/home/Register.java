@@ -20,11 +20,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 //import com.example.home.databinding.ActivityMainBinding;
@@ -151,55 +155,18 @@ public class Register extends AppCompatActivity {
         eFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                final String Email = eEmail.getText().toString();
                 final String password = ePassword.getText().toString();
                 final String Check = eCheck.getText().toString();
-                final String Email = eEmail.getText().toString();
                 final String Phone = ePhone.getText().toString();
                 final String send=eSend.getText().toString();
-                //驗證碼還沒做
-                mAuth.createUserWithEmailAndPassword(eEmail.getText().toString(), ePassword.getText().toString()).addOnCompleteListener(context, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(TextUtils.isEmpty(Email)){
-                            eEmail.setError("請輸入email");
-                            return;
-                        }
-                        else if(TextUtils.isEmpty(password)){
-                            ePassword.setError("請輸入密碼");
-                            return;
-                        }
-                        else if(TextUtils.isEmpty(Check)){
-                            ePassword.setError("請輸入密碼");
-                            return;
-                        }
-                        else if(!password.equals(Check)){
-                            ePassword.setError("請輸入相同密碼");
-                            return;
-                        }
-                        else if(password.length()<4){
-                            ePassword.setError("密碼請大於4個字元");
-                            return;
-                        }
-                        else if(!isVallidEmail(Email)){
-                            eEmail.setError("無效的email");
-                            return;
-                        }
-                        else if(TextUtils.isEmpty(Phone)){
-                            ePhone.setError("請輸入手機號碼");
-                            return;
-                        }
-                        else if(TextUtils.isEmpty(send)){
-                            eSend.setError("請輸入驗證碼");
-                            return;
-                        }
-                        Intent intent = new Intent(Register.this, Signin.class);
-                        startActivity(intent);  //回到登入
+                if(TextUtils.isEmpty(Email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(Check)||TextUtils.isEmpty(Phone) ||TextUtils.isEmpty(send)){
+                            Toast.makeText(Register.this,"ALL fields are required",Toast.LENGTH_SHORT).show();
+                    }else{
+                        register(Email,password,Check,Phone,send);
                     }
-                });
             }
         });
-
     }
 
 
@@ -255,18 +222,18 @@ public class Register extends AppCompatActivity {
         return(!TextUtils.isEmpty(target)&& Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 
-    /*private void register(String email,String password,String Check,String Phone,String send ){
+    private void register(String email,String password,String Check,String Phone,String send ){
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser rUser=mAuth.getCurrentUser();
+                    assert rUser != null;
                     String userId=rUser.getUid();
-                    databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
+                    databaseReference = FirebaseDatabase.getInstance().getReference("Register").child(userId);
                     HashMap<String,String> hashMap= new HashMap<>();
                     hashMap.put("userId",userId);
                     hashMap.put("email",email);
-                    hashMap.put("password",password);
                     hashMap.put("Check",Check);
                     hashMap.put("Phone",Phone);
                     hashMap.put("send",send);
@@ -286,7 +253,7 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
-        })
-    }*/
+        });
+    }
 
 }
