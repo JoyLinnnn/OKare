@@ -3,17 +3,25 @@ package com.example.home;
 public class ModelUsers {
     private String backtime;
     private String hossite;
+    private String new1;
     private String key;
 
     public ModelUsers(){
 
     }
 
-    public ModelUsers(String backtime, String hossite) {
+    public ModelUsers(String new1,String backtime, String hossite) {
+        this.new1 = new1;
         this.backtime = backtime;
         this.hossite = hossite;
     }
+    public String getnew1() {
+        return new1;
+    }
 
+    public void setnew1(String new1) {
+        this.new1 = new1;
+    }
     public String getBacktime() {
         return backtime;
     }

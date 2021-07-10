@@ -43,7 +43,8 @@ public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final ModelUsers data = mList.get(position);
-        holder.tv_backhospitaltime.setText("日期及時間："+data.getBacktime());
+        holder.tv_newtime.setText("回診日期："+data.getnew1());
+        holder.tv_backhospitaltime.setText("回診時間："+data.getBacktime());
         holder.tv_hospitalsite.setText("門診及編號："+data.getHossite());
         holder.btn_hapus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,10 +80,11 @@ public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder
             public boolean onLongClick(View v) {
                 FragmentManager manager = ((AppCompatActivity)activity).getSupportFragmentManager();
                 DialogForm dialog = new DialogForm(
+                        data.getnew1(),
                         data.getBacktime(),
                         data.getHossite(),
                         data.getKey(),
-                        "change"
+                        "change改變"
                 );
                 dialog.show(manager,"form");
                 return true;
@@ -97,11 +99,12 @@ public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_backhospitaltime, tv_hospitalsite;
+        TextView tv_backhospitaltime, tv_hospitalsite,tv_newtime;
         ImageView btn_hapus;
         CardView card_hasil;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            tv_newtime=itemView.findViewById(R.id.tv_newtime);
             tv_backhospitaltime = itemView.findViewById(R.id.tv_backhospitaltime);
             tv_hospitalsite = itemView.findViewById(R.id.tv_hospitalsite);
             btn_hapus = itemView.findViewById(R.id.hapus);

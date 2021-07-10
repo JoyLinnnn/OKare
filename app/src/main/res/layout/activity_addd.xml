@@ -8,16 +8,49 @@
     android:orientation="vertical"
     tools:context=".AdddActivity">
 
-    <EditText
-        android:id="@+id/edTime"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="10dp"
-        android:hint="例如:五月13日 下午"
-        android:importantForAutofill="no" />
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_once_date"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_date_range_black_24dp"
+            style="@style/Widget.AppCompat.ImageButton"/>
+
+        <TextView
+            android:id="@+id/edNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_once_time"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_access_time_black_24dp"
+            style="@style/Widget.AppCompat.ImageButton"/>
+
+
+        <TextView
+            android:id="@+id/edTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp" />
+
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/edHint"
@@ -31,17 +64,28 @@
         android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/確定新增"
+        android:id="@+id/btn_set_once_alarm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="10dp"
         android:backgroundTint="@color/ccaaffee"
-        android:text="確定"
+        android:text="設定一次性提醒"
         android:textSize="18sp"
-        app:cornerRadius="20dp" />
+        app:cornerRadius="20dp"/>
 
+    <Button
+    android:id="@+id/確定新增"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="10dp"
+    android:backgroundTint="@color/ccaaffee"
+    android:text="確定"
+    android:textSize="18sp"
+    app:cornerRadius="20dp" />
 
 </LinearLayout>

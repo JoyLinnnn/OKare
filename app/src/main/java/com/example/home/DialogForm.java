@@ -20,45 +20,48 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class DialogForm extends DialogFragment {
-    String Time, Hint, key, select;
+    String New,Time, Hint, key, select;
     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-    public DialogForm(String Time,String Hint,String key,String select){
+    public DialogForm(String New,String Time,String Hint,String key,String select){
+        this.New=New;
         this.Time=Time;
         this.Hint=Hint;
         this.key=key;
         this.select=select;
     }
-    TextView tTime,tHint;
+    TextView tNew,tTime,tHint;
     Button btn_sureadd;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view=inflater.inflate(R.layout.activity_addd,container,false);
+        tNew=view.findViewById(R.id.edNew);
         tTime=view.findViewById(R.id.edTime);
         tHint=view.findViewById(R.id.edHint);
         btn_sureadd=view.findViewById(R.id.確定新增);
 
+        tNew.setText(New);
         tTime.setText(Time);
         tHint.setText(Hint);
         btn_sureadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String New = tNew.getText().toString();
                 String Time = tTime.getText().toString();
                 String aHint = tHint.getText().toString();
-                if (select.equals("change")){
-                    database.child("Users").child(key).setValue(new ModelUsers(Time,aHint)).addOnSuccessListener(new OnSuccessListener<Void>() {
+                if (select.equals("change改變")){
+                    database.child("Users").child(key).setValue(new ModelUsers(New,Time,aHint)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(view.getContext(), "回診資料更新成功! ", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getContext(), Doctor.class));
+                            Toast.makeText(view.getContext(), "回診資料更新成功 ! ", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(), MainActivity.class));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(view.getContext(), "回診資料更新失敗! ", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getContext(), Doctor.class));
+                            Toast.makeText(view.getContext(), "回診資料更新失敗 ! ", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -76,3 +79,4 @@ public class DialogForm extends DialogFragment {
         }
     }
 }
+

@@ -23,14 +23,22 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_newtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="回診日期"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
             <TextView
                 android:id="@+id/tv_backhospitaltime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="回診時間"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/tv_hospitalsite"
                 android:layout_width="wrap_content"
