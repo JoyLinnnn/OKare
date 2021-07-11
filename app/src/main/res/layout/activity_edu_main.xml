@@ -266,4 +266,14 @@
             app:srcCompat="@drawable/_w3" />
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/ib_emore"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:background="@drawable/amore"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/衛_OKare_IV"
+        app:layout_constraintEnd_toEndOf="@+id/衛_OKare_IV"
+        app:srcCompat="@color/coffee_color" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
