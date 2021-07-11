@@ -8,16 +8,29 @@
     android:orientation="vertical"
     tools:context=".AdActivity">
 
-    <EditText
-        android:id="@+id/edMT"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="10dp"
-        android:hint="例如:上午9:00"
-        android:importantForAutofill="no" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_repeating_time"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_access_time_black_24dp"
+            style="@style/Widget.AppCompat.ImageButton"/>
+
+        <TextView
+            android:id="@+id/tvMT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/edMN"
@@ -29,6 +42,41 @@
         android:layout_marginBottom="10dp"
         android:hint="例如:高血壓藥 1粒"
         android:importantForAutofill="no" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_set_repeating_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ccaaffee"
+            android:text="設定重複提醒"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn_cancel_repeating_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ccaaffee"
+            android:text="取消重複提醒"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/確定新增"

@@ -29,8 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="吃藥時間"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/tv_mediname"
                 android:layout_width="wrap_content"

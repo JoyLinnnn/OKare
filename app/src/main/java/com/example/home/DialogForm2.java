@@ -36,7 +36,7 @@ public class DialogForm2 extends DialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view=inflater.inflate(R.layout.activity_ad, container, false);
-        tMT=view.findViewById(R.id.edMT);
+        tMT=view.findViewById(R.id.tvMT);
         tMN=view.findViewById(R.id.edMN);
         btn_suadd=view.findViewById(R.id.確定新增);
 
