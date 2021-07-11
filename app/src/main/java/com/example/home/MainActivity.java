@@ -18,15 +18,18 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseReference mydb;
-    TextView temp,hum;
+    TextView HR,SpO2,temp,hum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        temp=(TextView)findViewById(R.id.temp);
-        hum=(TextView)findViewById(R.id.hum);
-        mydb= FirebaseDatabase.getInstance().getReference().child("DHT11SensorData");
+        HR=(TextView)findViewById(R.id.HR);
+        SpO2=(TextView)findViewById(R.id.SpO2);
+//        temp=(TextView)findViewById(R.id.temp);
+//        hum=(TextView)findViewById(R.id.hum);
+//        mydb= FirebaseDatabase.getInstance().getReference().child("DHT11SensorData");
+        mydb= FirebaseDatabase.getInstance().getReference().child("Heartrate");
         try {
 
             mydb.addValueEventListener(new ValueEventListener() {
@@ -34,17 +37,26 @@ public class MainActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     // This method is called once with the initial value and again
                     // whenever data at this location is updated.
-                    /*String humdata = dataSnapshot.child("Humidity").getValue().toString();
-                    String tempdata = dataSnapshot.child("Temperature").getValue().toString();
-                    hum.setText(humdata);
-                    temp.setText(tempdata);*/
-                    String humdata=hum.getText().toString();
-                    String tempdata=temp.getText().toString();
-                    HashMap<String,String> userMap=new HashMap<>();
-                    userMap.put("hum",humdata);
-                    userMap.put("temp",tempdata);
-                    mydb.setValue(userMap);
+//                    String humdata = dataSnapshot.child("Humidity").getValue().toString();
+//                    String tempdata = dataSnapshot.child("Temperature").getValue().toString();
+                    String HRdata = dataSnapshot.child("HR").getValue().toString();
+                    String SpO2data = dataSnapshot.child("SpO2").getValue().toString();
+//                    hum.setText(humdata);
+//                    temp.setText(tempdata);
+                    HR.setText(HRdata);
+                    SpO2.setText(SpO2data);
+ //                   String HRdata=HR.getText().toString();
+ //                   String SpO2data=SpO2.getText().toString();
+ //                   String humdata=hum.getText().toString();//
+ //                   String tempdata=temp.getText().toString();
+ //                   HashMap<String,String> userMap=new HashMap<>();
+//                    userMap.put("HR",HRdata);
+//                   userMap.put("SpO2",SpO2data);
+//                    userMap.put("Humidity",humdata);
+//                    userMap.put("Temperature",tempdata);
+//                    mydb.setValue(userMap);
                 }
+
 
                 @Override
                 public void onCancelled(DatabaseError error) {
