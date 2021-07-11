@@ -72,6 +72,14 @@ public class commendMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 飲_即時定位_IB=findViewById(R.id.飲_即時定位_IB);
+        飲_即時定位_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,CurrentLocation.class);
+                startActivity(intent);
+            }
+        });
 
         ImageButton 飲_糖尿病框_IB=findViewById(R.id.飲_糖尿病框_IB);
         飲_糖尿病框_IB.setOnClickListener(new View.OnClickListener() {

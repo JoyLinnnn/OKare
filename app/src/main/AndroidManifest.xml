@@ -4,8 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
 
     <application
@@ -17,7 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Home">
 
-        <activity android:name=".Register" ></activity>
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key"/>
+
+        <activity android:name=".CurrentLocation"></activity>
+        <activity android:name=".Register" />
         <activity android:name=".Webview" />
         <activity android:name=".AdActivity" />
         <activity android:name=".AdddActivity" />
@@ -46,21 +52,15 @@
         <activity android:name=".edu_03" />
         <activity android:name=".edu_02" />
         <activity android:name=".edu_01" />
-        <activity android:name=".edu_main"/>
+        <activity android:name=".edu_main" />
         <activity android:name=".Homepage" />
         <activity android:name=".Signin">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <receiver
-            android:name=".AlarmReceiver"
-            android:enabled="true"
-            android:exported="true"/>
     </application>
 
 </manifest>

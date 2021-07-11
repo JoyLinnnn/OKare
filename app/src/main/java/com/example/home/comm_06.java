@@ -91,15 +91,15 @@ public class comm_06 extends AppCompatActivity {
                 Intent intent=new Intent(comm_01.this,noti.class);
                 startActivity(intent);
             }
-        });
+        });*/
         ImageButton 即_IB=findViewById(R.id.即_IB);
         即_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(comm_01.this,noti.class);
+                Intent intent=new Intent(comm_06.this,CurrentLocation.class);
                 startActivity(intent);
             }
-        });*/
+        });
         ImageButton 衛_IB=findViewById(R.id.衛_IB);
         衛_IB.setOnClickListener(new View.OnClickListener() {
             @Override

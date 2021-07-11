@@ -84,6 +84,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 居_即時定位_IB=findViewById(R.id.居_即時定位_IB);
+        居_即時定位_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,CurrentLocation.class);
+                startActivity(intent);
+            }
+        });
         ImageButton 居_醫療小卡_IB=findViewById(R.id.居_醫療小卡_IB);
         居_醫療小卡_IB.setOnClickListener(new View.OnClickListener() {
             @Override
