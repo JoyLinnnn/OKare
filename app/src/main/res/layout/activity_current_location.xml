@@ -24,7 +24,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/bt1"
+            android:id="@+id/居_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
             app:srcCompat="@drawable/bt1" />
 
         <ImageView
-            android:id="@+id/bt2"
+            android:id="@+id/醫_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -40,7 +40,7 @@
             app:srcCompat="@drawable/bt2" />
 
         <ImageView
-            android:id="@+id/bt3"
+            android:id="@+id/預_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,7 +48,7 @@
             app:srcCompat="@drawable/bt3" />
 
         <ImageView
-            android:id="@+id/bt4"
+            android:id="@+id/即_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +56,7 @@
             app:srcCompat="@drawable/bt4" />
 
         <ImageView
-            android:id="@+id/bt5"
+            android:id="@+id/衛_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -64,7 +64,7 @@
             app:srcCompat="@drawable/bt5" />
 
         <ImageView
-            android:id="@+id/bt6"
+            android:id="@+id/飲_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -79,6 +79,14 @@ public class edu_07 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 衛_即時定位_IB=findViewById(R.id.衛_即時定位_IB);
+        衛_即時定位_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_07.this,CurrentLocation.class);
+                startActivity(intent);
+            }
+        });
 
 
         衛_過敏內文_TV = findViewById(R.id.衛_過敏內文_TV);
