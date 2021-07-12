@@ -28,50 +28,50 @@
             android:id="@+id/IB_居"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:background="@drawable/bt1"
-            android:layout_marginRight="2dp"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/bt1" />
 
         <ImageButton
             android:id="@+id/IB_醫"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:background="@drawable/bt2"
-            android:layout_marginRight="2dp"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/bt2" />
 
         <ImageButton
             android:id="@+id/IB_預"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:background="@drawable/bt3"
-            android:layout_marginRight="2dp"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/bt3" />
 
         <ImageButton
             android:id="@+id/IB_即"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:background="@drawable/bt4"
-            android:layout_marginRight="2dp"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/bt4" />
 
         <ImageButton
             android:id="@+id/IB_衛"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:background="@drawable/bt5"
-            android:layout_marginRight="2dp"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/bt5" />
 
         <ImageButton
@@ -80,7 +80,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/bt6"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/bt6" />
 
     </LinearLayout>
@@ -189,6 +189,8 @@
             android:id="@+id/imageView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/aline" />
 
         <ImageButton
