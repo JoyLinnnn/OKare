@@ -185,6 +185,12 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/home" />
 
+        <ImageView
+            android:id="@+id/imageView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/aline" />
+
         <ImageButton
             android:id="@+id/IB_個人"
             android:layout_width="wrap_content"
