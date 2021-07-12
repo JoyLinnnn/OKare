@@ -3,6 +3,7 @@ package com.example.home;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -154,5 +155,10 @@ public class commendMain extends AppCompatActivity {
             }
         });
 
+    }
+    public void buttonOnClick(View view){
+        Uri uri=Uri.parse("https://www.goodfoodmarket.tw/news.php");
+        Intent i=new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(i);
     }
 }

@@ -272,6 +272,7 @@
         android:layout_height="60dp"
         android:background="@drawable/amore"
         android:scaleType="fitCenter"
+        android:onClick="buttonOnClick"
         app:layout_constraintBottom_toBottomOf="@+id/衛_OKare_IV"
         app:layout_constraintEnd_toEndOf="@+id/衛_OKare_IV"
         app:srcCompat="@color/coffee_color" />
