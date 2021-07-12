@@ -2,6 +2,7 @@ package com.example.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -154,6 +155,10 @@ public class edu_main extends AppCompatActivity {
         });
 
 
-
+    }
+    public void buttonOnClick(View view){
+        Uri uri=Uri.parse("https://www.cdc.gov.tw/Search");
+        Intent i=new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(i);
     }
 }
