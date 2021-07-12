@@ -11,65 +11,78 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
         android:adjustViewBounds="true"
-        app:srcCompat="@drawable/top" />
+        android:background="@color/upcolor"
+        app:srcCompat="@drawable/_up" />
 
     <LinearLayout
         android:id="@+id/linearlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_below="@+id/imageView"
         android:layout_marginTop="0dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/居_IB"
+        <ImageButton
+            android:id="@+id/IB_居"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:background="@drawable/bt1"
+            android:layout_marginRight="2dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/bt1" />
 
-        <ImageView
-            android:id="@+id/醫_IB"
+        <ImageButton
+            android:id="@+id/IB_醫"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:background="@drawable/bt2"
+            android:layout_marginRight="2dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/bt2" />
 
-        <ImageView
-            android:id="@+id/預_IB"
+        <ImageButton
+            android:id="@+id/IB_預"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:background="@drawable/bt3"
+            android:layout_marginRight="2dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/bt3" />
 
-        <ImageView
-            android:id="@+id/即_IB"
+        <ImageButton
+            android:id="@+id/IB_即"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:background="@drawable/bt4"
+            android:layout_marginRight="2dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/bt4" />
 
-        <ImageView
-            android:id="@+id/衛_IB"
+        <ImageButton
+            android:id="@+id/IB_衛"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:background="@drawable/bt5"
+            android:layout_marginRight="2dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/bt5" />
 
-        <ImageView
-            android:id="@+id/飲_IB"
+        <ImageButton
+            android:id="@+id/IB_飲"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
+            android:background="@drawable/bt6"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/bt6" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -156,33 +169,31 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="471dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
         android:background="@drawable/back2"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/bt7"
+        <ImageButton
+            android:id="@+id/IB_首頁"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/notice" />
+            android:background="@color/coffee_color"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home" />
 
-        <ImageView
-            android:id="@+id/bt8"
+        <ImageButton
+            android:id="@+id/IB_個人"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/homepage" />
+            android:background="@color/coffee_color"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/personinfo" />
 
-        <ImageView
-            android:id="@+id/bt9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/person" />
     </LinearLayout>
 
 </RelativeLayout>
