@@ -37,6 +37,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -87,6 +88,75 @@ public class CurrentLocation extends AppCompatActivity implements OnMapReadyCall
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_location);
+
+        ImageButton IB_首頁=findViewById(R.id.IB_首頁);
+        IB_首頁.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton IB_個人=findViewById(R.id.IB_個人);
+        IB_個人.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,Personal.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton IB_居=findViewById(R.id.IB_居);
+        IB_居.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton IB_醫=findViewById(R.id.IB_醫);
+        IB_醫.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,MedicalCard.class);
+                startActivity(intent);
+            }
+        });
+        /*ImageButton IB_預=findViewById(R.id.IB_預);
+        IB_預.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,Personal.class);
+                startActivity(intent);
+            }
+        });*/
+        ImageButton IB_即=findViewById(R.id.IB_即);
+        IB_即.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,CurrentLocation.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton IB_衛=findViewById(R.id.IB_衛);
+        IB_衛.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,edu_main.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton IB_飲=findViewById(R.id.IB_飲);
+        IB_飲.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CurrentLocation.this,commendMain.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
 
 
 
