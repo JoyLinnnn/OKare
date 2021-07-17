@@ -77,7 +77,7 @@
         android:id="@+id/username_back_register"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +154,7 @@
         android:id="@+id/tv_username_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:text="Email"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/et_email_register"
@@ -166,7 +166,7 @@
         android:id="@+id/et_email_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="請輸入email"
         android:inputType="textEmailAddress"
@@ -275,12 +275,11 @@
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="110dp"
         android:background="@drawable/aaadown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_finfsh_register"
         app:srcCompat="@color/coffee_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
