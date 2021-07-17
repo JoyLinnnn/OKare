@@ -98,17 +98,6 @@
         app:srcCompat="@drawable/lock" />
 
     <ImageView
-        android:id="@+id/ic_check"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_keeplogin"
-        app:layout_constraintEnd_toStartOf="@+id/tv_keeplogin"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_keeplogin"
-        app:srcCompat="@drawable/check" />
-
-    <ImageView
         android:id="@+id/ic_line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -145,24 +134,11 @@
         app:layout_constraintTop_toBottomOf="@+id/et_email"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/tv_keeplogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="保持登入"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/ccaaffee"
         android:text="登入"
         android:textSize="24sp"
@@ -170,7 +146,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_keeplogin"
+        app:layout_constraintTop_toBottomOf="@+id/password_back"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

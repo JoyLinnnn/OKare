@@ -58,7 +58,7 @@ public class Webview extends AppCompatActivity {
 
 
 
-        ImageButton _通知_IB=findViewById(R.id._通知_IB);
+ /*       ImageButton _通知_IB=findViewById(R.id._通知_IB);
         _通知_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +66,8 @@ public class Webview extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+  */
         ImageButton _個人_IB=findViewById(R.id._個人_IB);
         _個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override

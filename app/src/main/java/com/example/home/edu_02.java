@@ -23,14 +23,17 @@ public class edu_02 extends AppCompatActivity {
 
 
 
-        ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
+/*        ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
         通_通知_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(edu_02.this,noti.class);
                 startActivity(intent);
             }
-        });ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
+        });
+
+ */
+        ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

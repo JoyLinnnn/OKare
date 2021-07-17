@@ -27,7 +27,7 @@ public class edu_06 extends AppCompatActivity {
         setContentView(R.layout.activity_edu_06);
 
 
-        ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
+ /*       ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
         通_通知_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +35,8 @@ public class edu_06 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+  */
         ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override

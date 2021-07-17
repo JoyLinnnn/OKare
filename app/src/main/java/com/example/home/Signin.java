@@ -38,7 +38,7 @@ public class Signin extends AppCompatActivity {
         eEmail = findViewById(R.id.et_email);
         ePassword = findViewById(R.id.et_password);
         eLogin = findViewById(R.id.btn_login);
-        ekeepLogin = findViewById(R.id.tv_keeplogin);
+   //     ekeepLogin = findViewById(R.id.tv_keeplogin);
         etoRegister = findViewById(R.id.tv_toregister);
         etoForgot = findViewById(R.id.tv_toforgotpassword);
         mAuth=FirebaseAuth.getInstance();

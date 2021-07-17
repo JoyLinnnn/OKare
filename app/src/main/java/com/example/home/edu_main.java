@@ -88,7 +88,7 @@ public class edu_main extends AppCompatActivity {
             }
         });
 
-       ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
+/*       ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
         通_通知_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,6 +96,8 @@ public class edu_main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+ */
         ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override

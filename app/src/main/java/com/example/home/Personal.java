@@ -77,13 +77,15 @@ public class Personal extends AppCompatActivity {
         });
 
 
-        通_通知_IB.setOnClickListener(new View.OnClickListener() {
+/*        通_通知_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personal.this, noti.class);
                 startActivity(intent);
             }
         });
+
+ */
 
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override

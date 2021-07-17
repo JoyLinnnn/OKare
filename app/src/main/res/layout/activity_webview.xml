@@ -107,15 +107,6 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/_通知_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/_down1" />
-
-        <ImageButton
             android:id="@+id/_首頁_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,6 +114,14 @@
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/_down2" />
+
+        <ImageView
+            android:id="@+id/imageView51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/aline" />
 
         <ImageButton
             android:id="@+id/_個人_IB"
