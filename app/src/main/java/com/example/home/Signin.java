@@ -43,7 +43,7 @@ public class Signin extends AppCompatActivity {
         etoForgot = findViewById(R.id.tv_toforgotpassword);
         mAuth=FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(Signin.this, MainActivity.class));
+            startActivity(new Intent(Signin.this, Homepage.class));
             finish();
         }
 
