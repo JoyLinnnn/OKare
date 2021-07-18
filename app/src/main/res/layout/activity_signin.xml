@@ -166,7 +166,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="忘記密碼"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/忘記_IB"
         app:layout_constraintStart_toStartOf="@+id/tv_toregister"
         app:layout_constraintTop_toBottomOf="@+id/註冊_IB" />
 
@@ -183,7 +183,7 @@
         app:srcCompat="@drawable/btn_regi" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/忘記_IB"
         android:layout_width="56dp"
         android:layout_height="45dp"
         android:background="@color/coffee_color"

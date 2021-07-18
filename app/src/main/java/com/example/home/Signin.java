@@ -47,6 +47,15 @@ public class Signin extends AppCompatActivity {
             finish();
         }
 
+        ImageButton 忘記_IB=findViewById(R.id.忘記_IB);
+        忘記_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Signin.this,ForgetPSWD.class);
+                startActivity(intent);
+            }
+        });
+
         註冊_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
