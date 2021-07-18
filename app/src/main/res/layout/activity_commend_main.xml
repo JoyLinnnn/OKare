@@ -159,15 +159,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageButton
-            android:id="@+id/飲_糖尿病框_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/_d1"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_d1" />
-
-        <ImageButton
             android:id="@+id/飲_高血壓框_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,6 +166,15 @@
             android:background="@drawable/_d2"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/_d2" />
+
+        <ImageButton
+            android:id="@+id/飲_心血管疾病框_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_d5"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_d5" />
 
         <ImageButton
             android:id="@+id/飲_高膽固醇框_IB"
@@ -199,31 +199,31 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageButton
-            android:id="@+id/飲_痛風框_IB"
+            android:id="@+id/飲_腎臟疾病框_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/_d4"
+            android:background="@drawable/_d7"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/_d4" />
+            app:srcCompat="@drawable/_d7" />
 
         <ImageButton
-            android:id="@+id/飲_心血管疾病框_IB"
+            android:id="@+id/飲_糖尿病框_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/_d5"
+            android:background="@drawable/_d1"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/_d5" />
+            app:srcCompat="@drawable/_d1" />
 
         <ImageButton
-            android:id="@+id/飲_脂肪肝框_IB"
+            android:id="@+id/飲_過敏框_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/_d6"
+            android:background="@drawable/_d8"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/_d6" />
+            app:srcCompat="@drawable/_w7" />
 
     </LinearLayout>
 
@@ -237,13 +237,22 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <ImageButton
-            android:id="@+id/飲_腎臟疾病框_IB"
+            android:id="@+id/飲_痛風框_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/_d7"
+            android:background="@drawable/_d4"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/_d7" />
+            app:srcCompat="@drawable/_d4" />
+
+        <ImageButton
+            android:id="@+id/飲_脂肪肝框_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_d6"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_d6" />
 
         <ImageButton
             android:id="@+id/飲_癌症框_IB"
@@ -253,15 +262,6 @@
             android:background="@drawable/_d8"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/_d8" />
-
-        <ImageButton
-            android:id="@+id/飲_過敏框_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/_d8"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_w7" />
 
     </LinearLayout>
 

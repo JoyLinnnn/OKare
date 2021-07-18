@@ -160,15 +160,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageButton
-            android:id="@+id/衛_鬧中風_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/_w4"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_w4" />
-
-        <ImageButton
             android:id="@+id/衛_腎臟疾病_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -178,13 +169,22 @@
             app:srcCompat="@drawable/_w5" />
 
         <ImageButton
-            android:id="@+id/衛_氣喘_IB"
+            android:id="@+id/衛_糖尿病_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/covid19"
+            android:background="@drawable/_w3"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/covid19" />
+            app:srcCompat="@drawable/_w3" />
+
+        <ImageButton
+            android:id="@+id/衛_過敏_IB"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w7"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ed7" />
 
     </LinearLayout>
 
@@ -199,15 +199,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <ImageButton
-            android:id="@+id/衛_過敏_IB"
-            android:layout_width="137dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/_w7"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/ed7" />
-
-        <ImageButton
             android:id="@+id/衛_痛風_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -215,6 +206,15 @@
             android:background="@drawable/_w8"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/_w8" />
+
+        <ImageButton
+            android:id="@+id/衛_氣喘_IB"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/covid19"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/covid19" />
 
         <ImageButton
             android:id="@+id/衛_急救知識站_IB"
@@ -238,6 +238,15 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageButton
+            android:id="@+id/衛_鬧中風_IB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/_w4"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_w4" />
+
+        <ImageButton
             android:id="@+id/衛_心血管疾病_IB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -255,14 +264,6 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/_w2" />
 
-        <ImageButton
-            android:id="@+id/衛_糖尿病_IB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/_w3"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/_w3" />
     </LinearLayout>
 
     <ImageButton
