@@ -109,12 +109,17 @@
 
     <ImageView
         android:id="@+id/個_帳號格子_IV"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/_whblaline"
         app:layout_constraintBottom_toTopOf="@+id/個_密碼格子_IV"
-        app:layout_constraintStart_toStartOf="@+id/個_帳號文字_TV"
+        app:layout_constraintEnd_toEndOf="@+id/個_中深黃底_IV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/個_中深黃底_IV"
         app:layout_constraintTop_toTopOf="@+id/個_中深黃底_IV"
-        app:srcCompat="@drawable/_whblaline" />
+        app:srcCompat="@color/coffee_color" />
 
     <TextView
         android:id="@+id/個_密碼文字_TV"
@@ -128,12 +133,17 @@
 
     <ImageView
         android:id="@+id/個_密碼格子_IV"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/_whblaline"
         app:layout_constraintBottom_toBottomOf="@+id/個_中深黃底_IV"
-        app:layout_constraintStart_toStartOf="@+id/個_密碼文字_TV"
+        app:layout_constraintEnd_toEndOf="@+id/個_中深黃底_IV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/個_中深黃底_IV"
         app:layout_constraintTop_toTopOf="@+id/個_中深黃底_IV"
-        app:srcCompat="@drawable/_whblaline" />
+        app:srcCompat="@color/coffee_color" />
 
     <TextView
         android:id="@+id/個_手機號碼文字_TV"
@@ -147,17 +157,24 @@
 
     <ImageView
         android:id="@+id/個_手機號碼格子_IV"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/_whblaline"
         app:layout_constraintBottom_toBottomOf="@+id/個_中深黃底_IV"
-        app:layout_constraintStart_toStartOf="@+id/個_手機號碼文字_TV"
+        app:layout_constraintEnd_toEndOf="@+id/個_中深黃底_IV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/個_中深黃底_IV"
         app:layout_constraintTop_toBottomOf="@+id/個_密碼格子_IV"
-        app:srcCompat="@drawable/_whblaline" />
+        app:srcCompat="@color/coffee_color" />
 
     <EditText
         android:id="@+id/個_帳號輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/個_帳號格子_IV"
@@ -169,6 +186,8 @@
         android:id="@+id/個_密碼輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/個_密碼格子_IV"
@@ -180,6 +199,8 @@
         android:id="@+id/個_手機輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/個_手機號碼格子_IV"
