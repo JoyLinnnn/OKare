@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 //        temp=(TextView)findViewById(R.id.temp);
 //        hum=(TextView)findViewById(R.id.hum);
 //        mydb= FirebaseDatabase.getInstance().getReference().child("DHT11SensorData");
-        mydb= FirebaseDatabase.getInstance().getReference().child("Heartrate");
+        mydb= FirebaseDatabase.getInstance().getReference().child("Dato");
         try {
 
             mydb.addValueEventListener(new ValueEventListener() {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     // whenever data at this location is updated.
 //                    String humdata = dataSnapshot.child("Humidity").getValue().toString();
 //                    String tempdata = dataSnapshot.child("Temperature").getValue().toString();
-                    String HRdata = dataSnapshot.child("HR").getValue().toString();
+                    String HRdata = dataSnapshot.child("Ritmo cardiaco").getValue().toString();
                     String SpO2data = dataSnapshot.child("SpO2").getValue().toString();
 //                    hum.setText(humdata);
 //                    temp.setText(tempdata);
