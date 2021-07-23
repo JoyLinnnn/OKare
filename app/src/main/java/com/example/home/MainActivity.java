@@ -26,9 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         HR=(TextView)findViewById(R.id.HR);
         SpO2=(TextView)findViewById(R.id.SpO2);
-//        temp=(TextView)findViewById(R.id.temp);
-//        hum=(TextView)findViewById(R.id.hum);
-//        mydb= FirebaseDatabase.getInstance().getReference().child("DHT11SensorData");
+        temp=(TextView)findViewById(R.id.temp);
+        hum=(TextView)findViewById(R.id.hum);
         mydb= FirebaseDatabase.getInstance().getReference().child("Dato");
         try {
 
@@ -37,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     // This method is called once with the initial value and again
                     // whenever data at this location is updated.
-//                    String humdata = dataSnapshot.child("Humidity").getValue().toString();
-//                    String tempdata = dataSnapshot.child("Temperature").getValue().toString();
-                    String HRdata = dataSnapshot.child("Ritmo cardiaco").getValue().toString();
+                    String humdata = dataSnapshot.child("hum").getValue().toString();
+                    String tempdata = dataSnapshot.child("temp").getValue().toString();
+                    String HRdata = dataSnapshot.child("Heart").getValue().toString();
                     String SpO2data = dataSnapshot.child("SpO2").getValue().toString();
-//                    hum.setText(humdata);
-//                    temp.setText(tempdata);
+                    hum.setText(humdata);
+                    temp.setText(tempdata);
                     HR.setText(HRdata);
                     SpO2.setText(SpO2data);
  //                   String HRdata=HR.getText().toString();
