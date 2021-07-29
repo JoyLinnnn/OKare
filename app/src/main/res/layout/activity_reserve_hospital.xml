@@ -16,59 +16,71 @@
 
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
         android:layout_below="@+id/imageView"
         android:layout_marginTop="0dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/bt1"
+        <ImageButton
+            android:id="@+id/ib1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bt1" />
+            android:layout_marginRight="2dp"
+            android:background="@drawable/_homeyellow"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_homeyellow" />
 
-        <ImageView
-            android:id="@+id/bt2"
+        <ImageButton
+            android:id="@+id/ib2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bt2" />
+            android:layout_marginRight="2dp"
+            android:background="@drawable/_up2"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up2" />
 
-        <ImageView
-            android:id="@+id/bt3"
+        <ImageButton
+            android:id="@+id/ib3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bt3" />
+            android:layout_marginRight="2dp"
+            android:background="@drawable/ahos"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ahos" />
 
-        <ImageView
-            android:id="@+id/bt4"
+        <ImageButton
+            android:id="@+id/ib4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bt4" />
+            android:layout_marginRight="2dp"
+            android:background="@drawable/_up4"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up4" />
 
-        <ImageView
-            android:id="@+id/bt5"
+        <ImageButton
+            android:id="@+id/ib5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bt5" />
+            android:layout_marginRight="2dp"
+            android:background="@drawable/_up5"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up5" />
 
-        <ImageView
-            android:id="@+id/bt6"
+        <ImageButton
+            android:id="@+id/ib6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bt6" />
+            android:background="@drawable/_up6"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/_up6" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -92,6 +104,7 @@
             android:id="@+id/bt_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/ccaaffee"
             android:text="尋找附近醫院"
             app:iconTint="#F5F5F5" />
 
@@ -109,6 +122,7 @@
                 android:id="@+id/bt_toGoogle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/ccaaffee"
                 android:foregroundTint="#FFFFFF"
                 android:text="確定" />
 
@@ -124,26 +138,32 @@
         android:background="@drawable/back2"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/bt7"
+        <ImageButton
+            android:id="@+id/ib7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/notice" />
+            android:background="@color/coffee_color"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down2" />
 
         <ImageView
-            android:id="@+id/bt8"
+            android:id="@+id/imageView55"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/homepage" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/aline" />
 
-        <ImageView
-            android:id="@+id/bt9"
+        <ImageButton
+            android:id="@+id/ib8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/person" />
+            android:background="@color/coffee_color"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/_down3" />
+
     </LinearLayout>
 
 </RelativeLayout>
