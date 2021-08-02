@@ -89,6 +89,14 @@ public class edu_08 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 衛_預約掛號_IB=findViewById(R.id.衛_預約掛號_IB);
+        衛_預約掛號_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_08.this,ReserveHospital.class);
+                startActivity(intent);
+            }
+        });
 
         衛_痛風內文_TV = findViewById(R.id.衛_痛風內文_TV);
         // 資料若超過頁面，須設定可以Scrolling

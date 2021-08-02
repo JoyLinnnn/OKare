@@ -155,6 +155,14 @@ public class edu_main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 衛_預約掛號_IB=findViewById(R.id.衛_預約掛號_IB);
+        衛_預約掛號_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_main.this,ReserveHospital.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

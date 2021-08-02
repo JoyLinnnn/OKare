@@ -75,6 +75,15 @@ public class commendMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 飲_預約掛號_IB=findViewById(R.id.飲_預約掛號_IB);
+        飲_預約掛號_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(commendMain.this,ReserveHospital.class);
+                startActivity(intent);
+            }
+        });
+
         ImageButton 飲_即時定位_IB=findViewById(R.id.飲_即時定位_IB);
         飲_即時定位_IB.setOnClickListener(new View.OnClickListener() {
             @Override

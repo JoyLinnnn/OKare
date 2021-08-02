@@ -121,14 +121,14 @@ public class CurrentLocation extends AppCompatActivity implements OnMapReadyCall
                 startActivity(intent);
             }
         });
-        /*ImageButton IB_預=findViewById(R.id.IB_預);
+        ImageButton IB_預=findViewById(R.id.IB_預);
         IB_預.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(CurrentLocation.this,Personal.class);
+                Intent intent=new Intent(CurrentLocation.this,ReserveHospital.class);
                 startActivity(intent);
             }
-        });*/
+        });
         ImageButton IB_即=findViewById(R.id.IB_即);
         IB_即.setOnClickListener(new View.OnClickListener() {
             @Override

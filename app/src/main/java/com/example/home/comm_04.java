@@ -85,14 +85,14 @@ public class comm_04 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*ImageButton 預_IB=findViewById(R.id.預_IB);
+        ImageButton 預_IB=findViewById(R.id.預_IB);
         預_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(comm_01.this,noti.class);
+                Intent intent=new Intent(comm_04.this,ReserveHospital.class);
                 startActivity(intent);
             }
-        });*/
+        });
         ImageButton 即_IB=findViewById(R.id.即_IB);
         即_IB.setOnClickListener(new View.OnClickListener() {
             @Override

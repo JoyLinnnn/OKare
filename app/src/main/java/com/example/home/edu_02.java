@@ -90,6 +90,14 @@ public class edu_02 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 衛_預約掛號_IB=findViewById(R.id.衛_預約掛號_IB);
+        衛_預約掛號_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(edu_02.this,ReserveHospital.class);
+                startActivity(intent);
+            }
+        });
 
 
         衛_慢性肺病內文_TV = findViewById(R.id.衛_慢性肺病內文_TV);
