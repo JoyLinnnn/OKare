@@ -21,7 +21,7 @@ public class Webview extends AppCompatActivity {
         WebSettings webSettings=web.getSettings();
         ((WebSettings) webSettings).setJavaScriptEnabled(true);
         web.setWebViewClient(new Callback());
-        web.loadUrl("http://192.168.35.52/");
+        web.loadUrl("http://192.168.35.52/cam.mjpeg");
 
         ImageButton 居_居家檢測_IB=findViewById(R.id.居_居家檢測_IB);
         居_居家檢測_IB.setOnClickListener(new View.OnClickListener() {
