@@ -20,7 +20,8 @@ public class comm_05 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comm_05);
 
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
         飲_心血管疾病內文_TV = findViewById(R.id.飲_心血管疾病內文_TV);
         // 資料若超過頁面，須設定可以Scrolling

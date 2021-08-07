@@ -20,7 +20,8 @@ public class edu_04 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_04);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
 
 /*        ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);

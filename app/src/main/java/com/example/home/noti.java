@@ -13,7 +13,8 @@ public class noti extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noti);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override

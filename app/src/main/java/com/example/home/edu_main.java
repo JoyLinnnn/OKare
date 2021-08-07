@@ -14,7 +14,8 @@ public class edu_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_main);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton 衛_心血管疾病_IB=findViewById(R.id.衛_心血管疾病_IB);
         衛_心血管疾病_IB.setOnClickListener(new View.OnClickListener() {
             @Override

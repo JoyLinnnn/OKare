@@ -34,6 +34,8 @@ public class Signin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         註冊_IB = findViewById(R.id.註冊_IB);
         eEmail = findViewById(R.id.et_email);
         ePassword = findViewById(R.id.et_password);

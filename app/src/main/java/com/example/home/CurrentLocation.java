@@ -88,7 +88,8 @@ public class CurrentLocation extends AppCompatActivity implements OnMapReadyCall
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_location);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton IB_首頁=findViewById(R.id.IB_首頁);
         IB_首頁.setOnClickListener(new View.OnClickListener() {
             @Override

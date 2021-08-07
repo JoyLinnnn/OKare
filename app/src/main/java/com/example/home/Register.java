@@ -65,7 +65,8 @@ public class Register extends AppCompatActivity {
         eContinue = findViewById(R.id.btn_Continue_register);
         eResend = findViewById(R.id.btn_Resend_register);
         eCodeSubmit=findViewById(R.id.btn_codeSubmit_register);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
         Button btn_finfsh_register=findViewById(R.id.btn_finfsh_register);
         btn_finfsh_register.setOnClickListener(new View.OnClickListener() {

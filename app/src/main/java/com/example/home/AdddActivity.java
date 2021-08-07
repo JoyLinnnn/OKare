@@ -45,7 +45,8 @@ public class AdddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addd);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         edNew= findViewById(R.id.edNew);
         edTime = findViewById(R.id.edTime);
         edHint = findViewById(R.id.edHint);

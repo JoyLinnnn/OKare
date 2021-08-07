@@ -40,6 +40,8 @@ public class Personal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         mFinish = findViewById(R.id.個_完成按鈕_IB);
         通_通知_IB = findViewById(R.id.通_通知_IB);
         通_個人_IB = findViewById(R.id.通_個人_IB);

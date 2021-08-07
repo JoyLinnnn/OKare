@@ -30,7 +30,8 @@ public class Doctor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton 服藥_IB = findViewById(R.id.服藥_IB);
         服藥_IB.setOnClickListener(new View.OnClickListener() {
             @Override

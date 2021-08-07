@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         HR=(TextView)findViewById(R.id.HR);
         SpO2=(TextView)findViewById(R.id.SpO2);
         temp=(TextView)findViewById(R.id.temp);

@@ -13,7 +13,8 @@ public class Homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton 通_首頁_IB=findViewById(R.id.通_首頁_IB);
         通_首頁_IB.setOnClickListener(new View.OnClickListener() {
             @Override

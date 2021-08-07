@@ -27,6 +27,8 @@ public class ForgetPSWD extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_p_s_w_d);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         mAuth=FirebaseAuth.getInstance();
         emailAddress=findViewById(R.id.editTextTextPersonName);
         send=findViewById(R.id.forget_send);

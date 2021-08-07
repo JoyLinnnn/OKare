@@ -41,7 +41,8 @@ public class AdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         edMT = findViewById(R.id.tvMT);
         edMN = findViewById(R.id.edMN);
         btn_suadd = findViewById(R.id.確定新增);

@@ -63,7 +63,8 @@ public class ReserveHospital extends AppCompatActivity implements OnMapReadyCall
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserve_hospital);
-
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         mMap = findViewById(R.id.myMap2);
