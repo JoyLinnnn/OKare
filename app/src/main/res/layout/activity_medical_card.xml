@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:context=".MedicalCard">
+    android:layout_height="match_parent"
+    tools:context=".MedicalCard">
 
         <ImageView
             android:id="@+id/衛_OKare_IV"
@@ -175,7 +171,7 @@
             android:id="@+id/醫卡_完成按鈕_IB"
             android:layout_width="66dp"
             android:layout_height="45dp"
-            android:background="@drawable/_finishbutton"
+            android:background="@drawable/_editbutton"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
             app:layout_constraintHorizontal_bias="0.978"
@@ -363,109 +359,17 @@
             app:layout_constraintTop_toBottomOf="@+id/藥物格"
             app:srcCompat="?attr/selectableItemBackground" />
 
-        <EditText
-            android:id="@+id/醫卡_姓名輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/姓名格"
-            app:layout_constraintEnd_toEndOf="@+id/姓名格"
-            app:layout_constraintStart_toStartOf="@+id/姓名格"
-            app:layout_constraintTop_toTopOf="@+id/姓名格" />
-
-        <EditText
-            android:id="@+id/醫卡_性別輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/性別格"
-            app:layout_constraintEnd_toEndOf="@+id/性別格"
-            app:layout_constraintStart_toStartOf="@+id/性別格"
-            app:layout_constraintTop_toBottomOf="@+id/姓名格" />
-
-        <EditText
-            android:id="@+id/醫卡_血型輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/血型格"
-            app:layout_constraintEnd_toEndOf="@+id/血型格"
-            app:layout_constraintStart_toStartOf="@+id/血型格"
-            app:layout_constraintTop_toTopOf="@+id/血型格" />
-
-        <EditText
-            android:id="@+id/醫卡_住址輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/住址格"
-            app:layout_constraintEnd_toEndOf="@+id/住址格"
-            app:layout_constraintStart_toStartOf="@+id/住址格"
-            app:layout_constraintTop_toTopOf="@+id/住址格" />
-
-        <EditText
-            android:id="@+id/醫卡_藥物過敏輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/藥物格"
-            app:layout_constraintEnd_toEndOf="@+id/藥物格"
-            app:layout_constraintStart_toStartOf="@+id/藥物格"
-            app:layout_constraintTop_toTopOf="@+id/藥物格" />
-
-        <EditText
-            android:id="@+id/醫卡_病史輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/病史格"
-            app:layout_constraintEnd_toEndOf="@+id/病史格"
-            app:layout_constraintStart_toStartOf="@+id/病史格"
-            app:layout_constraintTop_toBottomOf="@+id/藥物格" />
-
-        <EditText
-            android:id="@+id/醫卡_聯絡人1姓名輸入_ET"
-            android:layout_width="100dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="5dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/Two姓名"
-            app:layout_constraintStart_toEndOf="@+id/One姓名"
-            app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人資訊"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <EditText
-            android:id="@+id/醫卡_聯絡人2姓名輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/通_藍底_IV"
-            app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1姓名輸入_ET"
-            app:layout_constraintStart_toEndOf="@+id/Two姓名"
-            app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET" />
-
         <TextView
             android:id="@+id/One電話"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="8dp"
             android:text="電話"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/One姓名"
-            app:layout_constraintStart_toEndOf="@+id/醫卡_聯絡人1姓名輸入_ET"
+            app:layout_constraintStart_toEndOf="@+id/tv7"
             app:layout_constraintTop_toTopOf="@+id/One姓名" />
+
 
         <TextView
             android:id="@+id/Two電話"
@@ -477,31 +381,6 @@
             app:layout_constraintEnd_toEndOf="@+id/One電話"
             app:layout_constraintStart_toStartOf="@+id/One電話"
             app:layout_constraintTop_toTopOf="@+id/Two姓名" />
-
-        <EditText
-            android:id="@+id/醫卡_聯絡人1電話輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="phone"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人1姓名輸入_ET"
-            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-            app:layout_constraintStart_toEndOf="@+id/One電話"
-            app:layout_constraintTop_toTopOf="@+id/醫卡_聯絡人1姓名輸入_ET" />
-
-        <EditText
-            android:id="@+id/醫卡_聯絡人2電話輸入_ET"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="phone"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/醫卡_聯絡人2姓名輸入_ET"
-            app:layout_constraintEnd_toEndOf="@+id/醫卡_聯絡人1電話輸入_ET"
-            app:layout_constraintStart_toEndOf="@+id/Two電話"
-            app:layout_constraintTop_toBottomOf="@+id/醫卡_聯絡人1電話輸入_ET" />
-
 
         <ImageView
             android:id="@+id/通_藍底_IV"
@@ -551,5 +430,171 @@
                 app:srcCompat="@drawable/_down3" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/姓名格"
+            app:layout_constraintEnd_toEndOf="@+id/姓名格"
+            app:layout_constraintStart_toStartOf="@+id/姓名格"
+            app:layout_constraintTop_toTopOf="@+id/姓名格" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/性別格"
+            app:layout_constraintEnd_toEndOf="@+id/性別格"
+            app:layout_constraintStart_toStartOf="@+id/性別格"
+            app:layout_constraintTop_toBottomOf="@+id/姓名格" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/血型格"
+            app:layout_constraintEnd_toEndOf="@+id/血型格"
+            app:layout_constraintStart_toStartOf="@+id/血型格"
+            app:layout_constraintTop_toBottomOf="@+id/性別格" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/住址格"
+            app:layout_constraintEnd_toEndOf="@+id/住址格"
+            app:layout_constraintStart_toStartOf="@+id/住址格"
+            app:layout_constraintTop_toTopOf="@+id/住址格" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/藥物格"
+            app:layout_constraintEnd_toEndOf="@+id/藥物格"
+            app:layout_constraintStart_toStartOf="@+id/藥物格"
+            app:layout_constraintTop_toTopOf="@+id/藥物格" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/病史格"
+            app:layout_constraintEnd_toEndOf="@+id/病史格"
+            app:layout_constraintStart_toStartOf="@+id/病史格"
+            app:layout_constraintTop_toBottomOf="@+id/藥物格" />
+
+        <ImageView
+            android:id="@+id/imageView56"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/One姓名"
+            app:layout_constraintStart_toEndOf="@+id/One姓名"
+            app:srcCompat="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/imageView57"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Two姓名"
+            app:layout_constraintEnd_toStartOf="@+id/Two電話"
+            app:layout_constraintStart_toEndOf="@+id/Two姓名"
+            app:srcCompat="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/imageView58"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/One電話"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintStart_toEndOf="@+id/One電話"
+            app:srcCompat="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/imageView59"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Two電話"
+            app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
+            app:layout_constraintStart_toEndOf="@+id/Two電話"
+            app:srcCompat="@drawable/line" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/One姓名"
+            app:layout_constraintEnd_toEndOf="@+id/imageView56"
+            app:layout_constraintStart_toEndOf="@+id/One姓名"
+            app:layout_constraintTop_toTopOf="@+id/One姓名" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView58"
+            app:layout_constraintEnd_toEndOf="@+id/imageView58"
+            app:layout_constraintStart_toEndOf="@+id/One電話" />
+
+        <TextView
+            android:id="@+id/tv9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView57"
+            app:layout_constraintEnd_toEndOf="@+id/imageView57"
+            app:layout_constraintStart_toEndOf="@+id/Two姓名" />
+
+        <TextView
+            android:id="@+id/tv10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView59"
+            app:layout_constraintEnd_toEndOf="@+id/imageView59"
+            app:layout_constraintStart_toEndOf="@+id/Two電話" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+

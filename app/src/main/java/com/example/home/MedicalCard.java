@@ -43,7 +43,7 @@ public class MedicalCard extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         提醒事項_IB=findViewById(R.id.提醒事項_IB);
         mFinish = findViewById(R.id.醫卡_完成按鈕_IB);
-/*        mModify = findViewById(R.id.醫卡_編輯按鈕_IB);*/
+/*        mModify = findViewById(R.id.醫卡_編輯按鈕_IB);
         mName = findViewById(R.id.醫卡_姓名輸入_ET);
         mGender = findViewById(R.id.醫卡_性別輸入_ET);
         mBloodtype = findViewById(R.id.醫卡_血型輸入_ET);
@@ -53,7 +53,7 @@ public class MedicalCard extends AppCompatActivity {
         mFamilyname1 = findViewById(R.id.醫卡_聯絡人1姓名輸入_ET);
         mFamilyphone1 = findViewById(R.id.醫卡_聯絡人1電話輸入_ET);
         mFamilyname2 = findViewById(R.id.醫卡_聯絡人2姓名輸入_ET);
-        mFamilyphone2 = findViewById(R.id.醫卡_聯絡人2電話輸入_ET);
+        mFamilyphone2 = findViewById(R.id.醫卡_聯絡人2電話輸入_ET);*/
 
         db = FirebaseFirestore.getInstance();
         //新增
