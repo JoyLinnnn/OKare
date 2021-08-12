@@ -201,6 +201,15 @@ public class MedicalCard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton 醫卡_完成按鈕_IB=findViewById(R.id.醫卡_完成按鈕_IB);
+        醫卡_完成按鈕_IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MedicalCard.this,MedicardWrite.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
