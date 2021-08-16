@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicardWrite">
+
+    <ImageView
+        android:id="@+id/imageView60"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/mdw1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mdw1" />
+
+    <ImageView
+        android:id="@+id/imageView62"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/mdw4"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView60"
+        app:layout_constraintEnd_toEndOf="@+id/imageView60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView60"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/imageView63"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView62"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView60"
+        app:srcCompat="@drawable/mdw2" />
+
+    <Button
+        android:id="@+id/完成_BT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/ccaaffee"
+        android:text="  完成  "
+        android:textSize="24sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView62"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/姓名tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="姓名"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toTopOf="@+id/imageView62" />
+
+    <TextView
+        android:id="@+id/性別tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="性別"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/姓名tv" />
+
+    <TextView
+        android:id="@+id/血型tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="血型"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/性別tv" />
+
+    <TextView
+        android:id="@+id/住址tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="住址"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/血型tv" />
+
+    <ImageView
+        android:id="@+id/格子4"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/住址tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <TextView
+        android:id="@+id/藥物過敏tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="藥物過敏"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/格子4" />
+
+    <TextView
+        android:id="@+id/重大病史tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="重大病史"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/藥物過敏tv" />
+
+    <TextView
+        android:id="@+id/緊急聯絡人tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="緊急連絡人資訊"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/重大病史tv" />
+
+    <TextView
+        android:id="@+id/姓名1tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="1 姓名"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人tv" />
+
+    <TextView
+        android:id="@+id/姓名2tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="2 姓名"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView62"
+        app:layout_constraintStart_toStartOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/姓名1tv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/格子1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/姓名tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/姓名tv"
+        app:layout_constraintTop_toTopOf="@+id/姓名tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/性別tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/性別tv"
+        app:layout_constraintTop_toTopOf="@+id/性別tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/血型tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/血型tv"
+        app:layout_constraintTop_toTopOf="@+id/血型tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/藥物過敏tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/藥物過敏tv"
+        app:layout_constraintTop_toTopOf="@+id/藥物過敏tv"
+        app:layout_constraintVertical_bias="0.214"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/重大病史tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/重大病史tv"
+        app:layout_constraintTop_toTopOf="@+id/重大病史tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <TextView
+        android:id="@+id/電話1tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="電話"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/姓名1tv"
+        app:layout_constraintTop_toBottomOf="@+id/緊急聯絡人tv" />
+
+    <TextView
+        android:id="@+id/電話2tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="電話"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView62"
+        app:layout_constraintEnd_toEndOf="@+id/電話1tv"
+        app:layout_constraintStart_toStartOf="@+id/電話1tv"
+        app:layout_constraintTop_toBottomOf="@+id/電話1tv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/格子7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/姓名1tv"
+        app:layout_constraintEnd_toStartOf="@+id/電話1tv"
+        app:layout_constraintStart_toEndOf="@+id/姓名1tv"
+        app:layout_constraintTop_toTopOf="@+id/姓名1tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/電話1tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/電話1tv"
+        app:layout_constraintTop_toTopOf="@+id/電話1tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/姓名2tv"
+        app:layout_constraintEnd_toStartOf="@+id/電話2tv"
+        app:layout_constraintStart_toEndOf="@+id/姓名2tv"
+        app:layout_constraintTop_toTopOf="@+id/姓名2tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <ImageView
+        android:id="@+id/格子10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/mdw3"
+        app:layout_constraintBottom_toBottomOf="@+id/電話2tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView62"
+        app:layout_constraintStart_toEndOf="@+id/電話2tv"
+        app:layout_constraintTop_toTopOf="@+id/電話2tv"
+        app:srcCompat="@color/coffee_color" />
+
+    <EditText
+        android:id="@+id/輸入格1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子1"
+        app:layout_constraintEnd_toEndOf="@+id/格子1"
+        app:layout_constraintStart_toStartOf="@+id/格子1"
+        app:layout_constraintTop_toTopOf="@+id/格子1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/輸入格2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子2"
+        app:layout_constraintEnd_toEndOf="@+id/格子2"
+        app:layout_constraintStart_toStartOf="@+id/格子2"
+        app:layout_constraintTop_toTopOf="@+id/格子2" />
+
+    <EditText
+        android:id="@+id/輸入格3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子3"
+        app:layout_constraintEnd_toEndOf="@+id/格子3"
+        app:layout_constraintStart_toStartOf="@+id/格子3"
+        app:layout_constraintTop_toTopOf="@+id/格子3" />
+
+    <EditText
+        android:id="@+id/輸入格4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子4"
+        app:layout_constraintEnd_toEndOf="@+id/格子4"
+        app:layout_constraintStart_toStartOf="@+id/格子4"
+        app:layout_constraintTop_toTopOf="@+id/格子4" />
+
+    <EditText
+        android:id="@+id/輸入格5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子5"
+        app:layout_constraintEnd_toEndOf="@+id/格子5"
+        app:layout_constraintStart_toStartOf="@+id/格子5"
+        app:layout_constraintTop_toTopOf="@+id/格子5" />
+
+    <EditText
+        android:id="@+id/輸入格6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子6"
+        app:layout_constraintEnd_toEndOf="@+id/格子6"
+        app:layout_constraintStart_toStartOf="@+id/格子6"
+        app:layout_constraintTop_toTopOf="@+id/格子6" />
+
+    <EditText
+        android:id="@+id/輸入格7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子7"
+        app:layout_constraintEnd_toEndOf="@+id/格子7"
+        app:layout_constraintStart_toStartOf="@+id/格子7"
+        app:layout_constraintTop_toTopOf="@+id/格子7" />
+
+    <EditText
+        android:id="@+id/輸入格8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子8"
+        app:layout_constraintEnd_toEndOf="@+id/格子8"
+        app:layout_constraintStart_toStartOf="@+id/格子8"
+        app:layout_constraintTop_toTopOf="@+id/格子8" />
+
+    <EditText
+        android:id="@+id/輸入格9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子9"
+        app:layout_constraintEnd_toEndOf="@+id/格子9"
+        app:layout_constraintStart_toStartOf="@+id/格子9"
+        app:layout_constraintTop_toTopOf="@+id/格子9" />
+
+    <EditText
+        android:id="@+id/輸入格10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/格子10"
+        app:layout_constraintEnd_toEndOf="@+id/格子10"
+        app:layout_constraintStart_toStartOf="@+id/格子10"
+        app:layout_constraintTop_toTopOf="@+id/格子10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
