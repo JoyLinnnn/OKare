@@ -5,112 +5,103 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class MedicalCard extends AppCompatActivity {
     private Context context=this;
-    private ImageButton mFinish;
-    private ImageButton mModify, 提醒事項_IB;
-    private EditText mName, mGender, mBloodtype, mAddress, mAllergy, mHistory, mFamilyname1, mFamilyname2, mFamilyphone1, mFamilyphone2;
+    private ImageButton mFinish,提醒事項_IB;
+    private Button load;
+    private TextView 醫卡tv_姓名,醫卡tv_性別,醫卡tv_血型,醫卡tv_住址,醫卡tv_藥物過敏,醫卡tv_病史,醫卡tv_緊急姓名1,醫卡tv_緊急電話1,醫卡tv_緊急姓名2,醫卡tv_緊急電話2;
     private FirebaseFirestore db;
-    private String x_last="0";
-    private String x_select="0";
+    private FirebaseAuth mAuth;
+    private String uid;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_card);
-        getSupportActionBar().hide();
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         提醒事項_IB=findViewById(R.id.提醒事項_IB);
         mFinish = findViewById(R.id.醫卡_完成按鈕_IB);
-/*        mModify = findViewById(R.id.醫卡_編輯按鈕_IB);
-        mName = findViewById(R.id.醫卡_姓名輸入_ET);
-        mGender = findViewById(R.id.醫卡_性別輸入_ET);
-        mBloodtype = findViewById(R.id.醫卡_血型輸入_ET);
-        mAddress = findViewById(R.id.醫卡_住址輸入_ET);
-        mAllergy = findViewById(R.id.醫卡_藥物過敏輸入_ET);
-        mHistory = findViewById(R.id.醫卡_病史輸入_ET);
-        mFamilyname1 = findViewById(R.id.醫卡_聯絡人1姓名輸入_ET);
-        mFamilyphone1 = findViewById(R.id.醫卡_聯絡人1電話輸入_ET);
-        mFamilyname2 = findViewById(R.id.醫卡_聯絡人2姓名輸入_ET);
-        mFamilyphone2 = findViewById(R.id.醫卡_聯絡人2電話輸入_ET);*/
-
+        load=findViewById(R.id.load);
+        醫卡tv_姓名= findViewById(R.id.醫卡_姓名_tv);
+        醫卡tv_性別 = findViewById(R.id.醫卡_性別_tv);
+        醫卡tv_血型 = findViewById(R.id.醫卡_血型_tv);
+        醫卡tv_住址 = findViewById(R.id.醫卡_住址_tv);
+        醫卡tv_藥物過敏 = findViewById(R.id.醫卡_藥物過敏_tv);
+        醫卡tv_病史= findViewById(R.id.醫卡_病史_tv);
+        醫卡tv_緊急姓名1 = findViewById(R.id.醫卡_緊急姓名1_tv);
+        醫卡tv_緊急電話1 = findViewById(R.id.醫卡_緊急電話1_tv);
+        醫卡tv_緊急姓名2 = findViewById(R.id.醫卡_緊急姓名2_tv);
+        醫卡tv_緊急電話2 = findViewById(R.id.醫卡_緊急電話2_tv);
         db = FirebaseFirestore.getInstance();
-        //新增
+
+        load.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fetchdata();
+            }
+        });
+
+        /*load.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db.collection("okaredb").document("Medicard").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if(documentSnapshot.exists())
+                        {
+                            String 姓名=documentSnapshot.getString("姓名");
+                            String 性別=documentSnapshot.getString("性別");
+                            String 血型=documentSnapshot.getString("血型");
+                            String 住址=documentSnapshot.getString("住址");
+                            String 藥物過敏=documentSnapshot.getString("藥物過敏");
+                            String 病史=documentSnapshot.getString("病史");
+                            String 緊急姓名1=documentSnapshot.getString("緊急姓名1");
+                            String 緊急電話1=documentSnapshot.getString("緊急電話1");
+                            String 緊急姓名2=documentSnapshot.getString("緊急姓名2");
+                            String 緊急電話2=documentSnapshot.getString("緊急電話2");
+                            Map<String,Object> map=documentSnapshot.getData();
+                            醫卡tv_姓名.setText(姓名);
+                            醫卡tv_性別.setText(性別);
+                            醫卡tv_血型.setText(血型);
+                            醫卡tv_住址.setText(住址);
+                            醫卡tv_藥物過敏.setText(藥物過敏);
+                            醫卡tv_病史.setText(病史);
+                            醫卡tv_緊急姓名1.setText(緊急姓名1);
+                            醫卡tv_緊急電話1.setText(緊急電話1);
+                            醫卡tv_緊急姓名2.setText(緊急姓名2);
+                            醫卡tv_緊急電話2.setText(緊急電話2);
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MedicalCard.this, e.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });*/
+
         mFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Map<String, Object> text_data = new HashMap<>();
-                text_data.put("姓名", mName.getText().toString());
-                text_data.put("性別", mGender.getText().toString());
-                text_data.put("血型",mBloodtype.getText().toString());
-                text_data.put("地址", mAddress.getText().toString());
-                text_data.put("藥物過敏", mAllergy.getText().toString());
-                text_data.put("病史", mHistory.getText().toString());
-                text_data.put("緊急聯絡人姓名1", mFamilyname1.getText().toString());
-                text_data.put("緊急聯絡人電話1", mFamilyphone1.getText().toString());
-                text_data.put("緊急聯絡人姓名2", mFamilyname2.getText().toString());
-                text_data.put("緊急聯絡人電話2", mFamilyphone2.getText().toString());
-
-                Integer x_id = Integer.valueOf(x_last) + 1;
-                db.collection("MedicalCard").document(String.valueOf(x_id)).set(text_data)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(MedicalCard.this, "新增成功", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MedicalCard.this, "新增失敗", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                data_select();
+                Intent intent=new Intent(MedicalCard.this,MedicardWrite.class);
+                startActivity(intent);
             }
         });
-        //修改
-        /*mModify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Map<String, Object> text_data = new HashMap<>();
-                text_data.put("姓名", mName.getText().toString());
-                text_data.put("性別", mGender.getText().toString());
-
-                db.collection("users").document(x_select).update(text_data)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(MedicalCard.this, "修改成功", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MedicalCard.this, "修改失敗", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                data_select();
-            }
-        });*/
         提醒事項_IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,14 +133,6 @@ public class MedicalCard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageButton 預_IB=findViewById(R.id.預_IB);
-        預_IB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MedicalCard.this,ReserveHospital.class);
-                startActivity(intent);
-            }
-        });
         ImageButton 即_IB=findViewById(R.id.即_IB);
         即_IB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,16 +158,6 @@ public class MedicalCard extends AppCompatActivity {
             }
         });
 
-/*        ImageButton 通_通知_IB=findViewById(R.id.通_通知_IB);
-        通_通知_IB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MedicalCard.this,noti.class);
-                startActivity(intent);
-            }
-        });
-
- */
         ImageButton 通_個人_IB=findViewById(R.id.通_個人_IB);
         通_個人_IB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -201,44 +174,33 @@ public class MedicalCard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageButton 醫卡_完成按鈕_IB=findViewById(R.id.醫卡_完成按鈕_IB);
-        醫卡_完成按鈕_IB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MedicalCard.this,MedicardWrite.class);
-                startActivity(intent);
-            }
-        });
-
-
-
     }
-
-    private void data_select(){
-        CollectionReference CR=db.collection("users");
-        final List<Map<String,Object>> items=new ArrayList<Map<String,Object>>();
-        CR.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+    public void fetchdata(){
+        DocumentReference document=db.collection("Medicard").document("1");
+        document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                for(QueryDocumentSnapshot document:task.getResult()){
-                    Map<String,Object> item=new HashMap<String, Object>();
-                    item.put("id",document.getId());
-                    item.put("姓名",document.get("姓名"));
-                    item.put("性別",document.get("性別"));
-                    item.put("血型",document.get("血型"));
-                    item.put("地址",document.get("地址"));
-                    item.put("藥物過敏",document.get("藥物過敏"));
-                    item.put("病史",document.get("病史"));
-                    item.put("緊急聯絡人姓名1",document.get("緊急聯絡人姓名1"));
-                    item.put("緊急聯絡人電話1",document.get("緊急聯絡人電話1"));
-                    item.put("緊急聯絡人姓名2",document.get("緊急聯絡人姓名2"));
-                    item.put("緊急聯絡人電話2",document.get("緊急聯絡人電話2"));
-                    items.add(item);
-                    x_last=document.getId();
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(documentSnapshot.exists()){
+                    醫卡tv_姓名.setText(documentSnapshot.getString("姓名"));
+                    醫卡tv_性別.setText(documentSnapshot.getString("性別"));
+                    醫卡tv_血型.setText(documentSnapshot.getString("血型"));
+                    醫卡tv_住址.setText(documentSnapshot.getString("住址"));
+                    醫卡tv_藥物過敏.setText(documentSnapshot.getString("藥物過敏"));
+                    醫卡tv_病史.setText(documentSnapshot.getString("病史"));
+                    醫卡tv_緊急姓名1.setText(documentSnapshot.getString("緊急聯絡人姓名1"));
+                    醫卡tv_緊急電話1.setText(documentSnapshot.getString("緊急聯絡人電話1"));
+                    醫卡tv_緊急姓名2.setText(documentSnapshot.getString("緊急聯絡人姓名2"));
+                    醫卡tv_緊急電話2.setText(documentSnapshot.getString("緊急聯絡人電話2"));
+                }else{
+                    Toast.makeText(getApplicationContext(),"not found",Toast.LENGTH_SHORT).show();
                 }
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(),"Failed to fetch",Toast.LENGTH_SHORT).show();
             }
         });
     }
 }
-
-//test

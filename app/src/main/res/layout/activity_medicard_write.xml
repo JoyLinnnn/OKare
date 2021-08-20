@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/mdw2" />
 
     <Button
-        android:id="@+id/完成_BT"
+        android:id="@+id/醫卡_完成_BT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/ccaaffee"
@@ -318,12 +318,11 @@
         app:srcCompat="@color/coffee_color" />
 
     <EditText
-        android:id="@+id/輸入格1"
+        android:id="@+id/醫卡_姓名輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子1"
         app:layout_constraintEnd_toEndOf="@+id/格子1"
@@ -332,12 +331,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/輸入格2"
+        android:id="@+id/醫卡_性別輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子2"
         app:layout_constraintEnd_toEndOf="@+id/格子2"
@@ -345,12 +343,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子2" />
 
     <EditText
-        android:id="@+id/輸入格3"
+        android:id="@+id/醫卡_血型輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子3"
         app:layout_constraintEnd_toEndOf="@+id/格子3"
@@ -358,12 +355,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子3" />
 
     <EditText
-        android:id="@+id/輸入格4"
+        android:id="@+id/醫卡_住址輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子4"
         app:layout_constraintEnd_toEndOf="@+id/格子4"
@@ -371,12 +367,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子4" />
 
     <EditText
-        android:id="@+id/輸入格5"
+        android:id="@+id/醫卡_藥物過敏輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子5"
         app:layout_constraintEnd_toEndOf="@+id/格子5"
@@ -384,12 +379,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子5" />
 
     <EditText
-        android:id="@+id/輸入格6"
+        android:id="@+id/醫卡_病史輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子6"
         app:layout_constraintEnd_toEndOf="@+id/格子6"
@@ -397,12 +391,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子6" />
 
     <EditText
-        android:id="@+id/輸入格7"
+        android:id="@+id/醫卡_聯絡人1姓名輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子7"
         app:layout_constraintEnd_toEndOf="@+id/格子7"
@@ -410,12 +403,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子7" />
 
     <EditText
-        android:id="@+id/輸入格8"
+        android:id="@+id/醫卡_聯絡人1電話輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子8"
         app:layout_constraintEnd_toEndOf="@+id/格子8"
@@ -423,12 +415,11 @@
         app:layout_constraintTop_toTopOf="@+id/格子8" />
 
     <EditText
-        android:id="@+id/輸入格9"
+        android:id="@+id/醫卡_聯絡人2姓名輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子9"
         app:layout_constraintEnd_toEndOf="@+id/格子9"
@@ -436,16 +427,27 @@
         app:layout_constraintTop_toTopOf="@+id/格子9" />
 
     <EditText
-        android:id="@+id/輸入格10"
+        android:id="@+id/醫卡_聯絡人2電話輸入_ET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/格子10"
         app:layout_constraintEnd_toEndOf="@+id/格子10"
         app:layout_constraintStart_toStartOf="@+id/格子10"
         app:layout_constraintTop_toTopOf="@+id/格子10" />
+
+    <Button
+        android:id="@+id/bu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
