@@ -178,7 +178,7 @@
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="0dp"
-        android:layout_height="134dp"
+        android:layout_height="150dp"
         android:background="@drawable/_whitebackground"
         app:layout_constraintBottom_toBottomOf="@+id/飲_白框_IV"
         app:layout_constraintEnd_toEndOf="@+id/飲_白框_IV"
