@@ -171,11 +171,10 @@
         android:id="@+id/醫卡_完成按鈕_IB"
         android:layout_width="66dp"
         android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/_editbutton"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/醫_中深黃底_IV"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintStart_toStartOf="@+id/醫_中深黃底_IV"
         app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
         app:srcCompat="@color/cardview_shadow_end_color" />
 
@@ -586,15 +585,15 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView59"
         app:layout_constraintStart_toEndOf="@+id/Two電話" />
 
-    <Button
+    <ImageButton
         android:id="@+id/load"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="載入"
-        app:layout_constraintEnd_toEndOf="@+id/醫卡_完成按鈕_IB"
-        app:layout_constraintHorizontal_bias="0.784"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="199dp" />
+        android:layout_width="66dp"
+        android:layout_height="45dp"
+        android:background="@drawable/_finishbutton"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/醫卡_完成按鈕_IB"
+        app:layout_constraintTop_toBottomOf="@+id/醫_上白底_IV"
+        app:srcCompat="@color/coffee_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
