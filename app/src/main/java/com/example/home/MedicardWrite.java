@@ -38,6 +38,8 @@ public class MedicardWrite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicard_write);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         bu=findViewById(R.id.bu);
         完成=findViewById(R.id.醫卡_完成_BT);
         mName=findViewById(R.id.醫卡_姓名輸入_ET);

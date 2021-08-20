@@ -32,6 +32,8 @@ public class MedicalCard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_card);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         提醒事項_IB=findViewById(R.id.提醒事項_IB);
         mFinish = findViewById(R.id.醫卡_完成按鈕_IB);
         load=findViewById(R.id.load);
