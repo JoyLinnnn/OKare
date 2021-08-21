@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MedicardWrite">
 
+    <Button
+        android:id="@+id/bu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/ccaaffee"
+        android:text="完成"
+        android:textSize="24sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView62"
+        app:layout_constraintVertical_bias="1.0" />
+
     <ImageView
         android:id="@+id/imageView60"
         android:layout_width="0dp"
@@ -20,6 +35,21 @@
         app:srcCompat="@drawable/mdw1" />
 
     <Button
+        android:id="@+id/motify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/ccaaffee"
+        android:text="修改"
+        android:textSize="24sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView62"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
         android:id="@+id/bu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +59,7 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView60"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView62"
         app:layout_constraintVertical_bias="1.0" />
@@ -71,7 +101,7 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView60"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView62"
         app:layout_constraintVertical_bias="1.0" />

@@ -8,17 +8,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Map;
 
 public class MedicalCard extends AppCompatActivity {
     private Context context=this;
@@ -26,6 +29,8 @@ public class MedicalCard extends AppCompatActivity {
     private Button load;
     private TextView 醫卡tv_姓名,醫卡tv_性別,醫卡tv_血型,醫卡tv_住址,醫卡tv_藥物過敏,醫卡tv_病史,醫卡tv_緊急姓名1,醫卡tv_緊急電話1,醫卡tv_緊急姓名2,醫卡tv_緊急電話2;
     private FirebaseFirestore db;
+    private FirebaseDatabase database;
+    private DatabaseReference reference;
     private FirebaseAuth mAuth;
     private String uid;
     @SuppressLint("WrongViewCast")
@@ -47,11 +52,51 @@ public class MedicalCard extends AppCompatActivity {
         醫卡tv_緊急姓名2 = findViewById(R.id.醫卡_緊急姓名2_tv);
         醫卡tv_緊急電話2 = findViewById(R.id.醫卡_緊急電話2_tv);
         db = FirebaseFirestore.getInstance();
+        mAuth=FirebaseAuth.getInstance();
 
         load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fetchdata();
+                FirebaseUser rUser=mAuth.getCurrentUser();
+                assert rUser !=null;
+                String userId=rUser.getUid();
+                reference = FirebaseDatabase.getInstance().getReference("Medicard").child(userId);
+                reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                        if(datasnapshot.exists()){
+                            Map<String,Object> map=(Map<String, Object>) datasnapshot.getValue();
+
+                            String 姓名=(String) map.get("姓名");
+                            String 性別=(String) map.get("性別");
+                            String 血型=(String) map.get("血型");
+                            String 住址=(String) map.get("住址");
+                            String 藥物過敏=(String) map.get("藥物過敏");
+                            String 病史=(String) map.get("病史");
+                            String 緊急姓名1=(String) map.get("緊急聯絡人姓名1");
+                            String 緊急電話1=(String) map.get("緊急聯絡人電話1");
+                            String 緊急姓名2=(String) map.get("緊急聯絡人姓名2");
+                            String 緊急電話2=(String) map.get("緊急聯絡人電話2");
+                            醫卡tv_姓名.setText(姓名);
+                            醫卡tv_性別.setText(性別);
+                            醫卡tv_血型.setText(血型);
+                            醫卡tv_住址.setText(住址);
+                            醫卡tv_藥物過敏.setText(藥物過敏);
+                            醫卡tv_病史.setText(病史);
+                            醫卡tv_緊急姓名1.setText(緊急姓名1);
+                            醫卡tv_緊急電話1.setText(緊急電話1);
+                            醫卡tv_緊急姓名2.setText(緊急姓名2);
+                            醫卡tv_緊急電話2.setText(緊急電話2);
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
             }
         });
 
@@ -175,7 +220,7 @@ public class MedicalCard extends AppCompatActivity {
             }
         });
     }
-    public void fetchdata(){
+    /*public void fetchdata(){
         DocumentReference document=db.collection("Medicard").document("1");
         document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -202,5 +247,5 @@ public class MedicalCard extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Failed to fetch",Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }*/
 }

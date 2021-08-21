@@ -12,47 +12,136 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class MedicardWrite extends AppCompatActivity {
     private Context context = this;
-    private Button bu,完成;
+    private Button bu,完成,motify;
     private EditText mName, mGender, mBloodtype, mAddress, mAllergy, mHistory, mFamilyname1, mFamilyname2, mFamilyphone1, mFamilyphone2;
     private FirebaseFirestore db;
-    private String x_last="0";
-    private String x_select="0";
+    private FirebaseDatabase database;
+    private DatabaseReference reference;
+    private FirebaseAuth mAuth;
+    private int x_last=0;
+    private String x_select;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicard_write);
-        bu=findViewById(R.id.bu);
-        完成=findViewById(R.id.醫卡_完成_BT);
-        mName=findViewById(R.id.醫卡_姓名輸入_ET);
-        mGender=findViewById(R.id.醫卡_性別輸入_ET);
-        mBloodtype=findViewById(R.id.醫卡_血型輸入_ET);
-        mAddress=findViewById(R.id.醫卡_住址輸入_ET);
-        mAllergy=findViewById(R.id.醫卡_藥物過敏輸入_ET);
-        mHistory=findViewById(R.id.醫卡_病史輸入_ET);
-        mFamilyname1=findViewById(R.id.醫卡_聯絡人1姓名輸入_ET);
-        mFamilyphone1=findViewById(R.id.醫卡_聯絡人1電話輸入_ET);
-        mFamilyname2=findViewById(R.id.醫卡_聯絡人2姓名輸入_ET);
-        mFamilyphone2=findViewById(R.id.醫卡_聯絡人2電話輸入_ET);
-        db =FirebaseFirestore.getInstance();
+        bu = findViewById(R.id.bu);
+        motify=findViewById(R.id.motify);
+        完成 = findViewById(R.id.醫卡_完成_BT);
+        mName = findViewById(R.id.醫卡_姓名輸入_ET);
+        mGender = findViewById(R.id.醫卡_性別輸入_ET);
+        mBloodtype = findViewById(R.id.醫卡_血型輸入_ET);
+        mAddress = findViewById(R.id.醫卡_住址輸入_ET);
+        mAllergy = findViewById(R.id.醫卡_藥物過敏輸入_ET);
+        mHistory = findViewById(R.id.醫卡_病史輸入_ET);
+        mFamilyname1 = findViewById(R.id.醫卡_聯絡人1姓名輸入_ET);
+        mFamilyphone1 = findViewById(R.id.醫卡_聯絡人1電話輸入_ET);
+        mFamilyname2 = findViewById(R.id.醫卡_聯絡人2姓名輸入_ET);
+        mFamilyphone2 = findViewById(R.id.醫卡_聯絡人2電話輸入_ET);
+        //db = FirebaseFirestore.getInstance();
+        mAuth=FirebaseAuth.getInstance();
 
         bu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseUser rUser=mAuth.getCurrentUser();
+                assert rUser !=null;
+                String userId=rUser.getUid();
+                reference = FirebaseDatabase.getInstance().getReference("Medicard").child(userId);
+                String 姓名 = mName.getText().toString();
+                String 性別 = mGender.getText().toString();
+                String 血型 = mBloodtype.getText().toString();
+                String 住址 = mAddress.getText().toString();
+                String 藥物過敏 = mAllergy.getText().toString();
+                String 病史 = mHistory.getText().toString();
+                String 緊急聯絡人姓名1 = mFamilyname1.getText().toString();
+                String 緊急聯絡人電話1 = mFamilyphone1.getText().toString();
+                String 緊急聯絡人姓名2 = mFamilyname2.getText().toString();
+                String 緊急聯絡人電話2 = mFamilyphone2.getText().toString();
+
+                HashMap<String,String> hashMap=new HashMap<>();
+                hashMap.put("userId",userId);
+                hashMap.put("姓名",姓名);
+                hashMap.put("性別",性別);
+                hashMap.put("血型",血型);
+                hashMap.put("住址",住址);
+                hashMap.put("藥物過敏",藥物過敏);
+                hashMap.put("病史",病史);
+                hashMap.put("緊急聯絡人姓名1",緊急聯絡人姓名1);
+                hashMap.put("緊急聯絡人電話1",緊急聯絡人電話1);
+                hashMap.put("緊急聯絡人姓名2",緊急聯絡人姓名2);
+                hashMap.put("緊急聯絡人電話2",緊急聯絡人電話2);
+
+
+                reference.setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(MedicardWrite.this, "新增成功", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MedicardWrite.this, "新增失敗", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+        motify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseUser rUser=mAuth.getCurrentUser();
+                assert rUser !=null;
+                String userId=rUser.getUid();
+                reference = FirebaseDatabase.getInstance().getReference("Medicard").child(userId);
+                String 姓名 = mName.getText().toString();
+                String 性別 = mGender.getText().toString();
+                String 血型 = mBloodtype.getText().toString();
+                String 住址 = mAddress.getText().toString();
+                String 藥物過敏 = mAllergy.getText().toString();
+                String 病史 = mHistory.getText().toString();
+                String 緊急聯絡人姓名1 = mFamilyname1.getText().toString();
+                String 緊急聯絡人電話1 = mFamilyphone1.getText().toString();
+                String 緊急聯絡人姓名2 = mFamilyname2.getText().toString();
+                String 緊急聯絡人電話2 = mFamilyphone2.getText().toString();
+
+                HashMap <String,Object> hashMap=new HashMap<>();
+                hashMap.put("userId",userId);
+                hashMap.put("姓名",姓名);
+                hashMap.put("性別",性別);
+                hashMap.put("血型",血型);
+                hashMap.put("住址",住址);
+                hashMap.put("藥物過敏",藥物過敏);
+                hashMap.put("病史",病史);
+                hashMap.put("緊急聯絡人姓名1",緊急聯絡人姓名1);
+                hashMap.put("緊急聯絡人電話1",緊急聯絡人電話1);
+                hashMap.put("緊急聯絡人姓名2",緊急聯絡人姓名2);
+                hashMap.put("緊急聯絡人電話2",緊急聯絡人電話2);
+
+                reference.updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {
+                    @Override
+                    public void onSuccess(Object o) {
+                        Toast.makeText(MedicardWrite.this, "修改成功", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+
+
+        /*bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -83,7 +172,7 @@ public class MedicardWrite extends AppCompatActivity {
                 });
                 data_select();
             }
-        });
+        });*/
 
 
         完成.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +216,7 @@ public class MedicardWrite extends AppCompatActivity {
                 });
 
     }*/
-    private void data_select(){
+    /*private void data_select(){
         CollectionReference CR=db.collection("Medicard");
         final List<Map<String,Object>> items=new ArrayList<Map<String,Object>>();
         CR.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -151,5 +240,5 @@ public class MedicardWrite extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
 }
