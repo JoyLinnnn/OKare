@@ -38,7 +38,7 @@ public class MedicardWrite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicard_write);
         bu = findViewById(R.id.bu);
-        motify=findViewById(R.id.motify);
+        //motify=findViewById(R.id.motify);
         完成 = findViewById(R.id.醫卡_完成_BT);
         mName = findViewById(R.id.醫卡_姓名輸入_ET);
         mGender = findViewById(R.id.醫卡_性別輸入_ET);
@@ -70,36 +70,34 @@ public class MedicardWrite extends AppCompatActivity {
                 String 緊急聯絡人電話1 = mFamilyphone1.getText().toString();
                 String 緊急聯絡人姓名2 = mFamilyname2.getText().toString();
                 String 緊急聯絡人電話2 = mFamilyphone2.getText().toString();
+                    HashMap<String, String> hashMap = new HashMap<>();
+                    hashMap.put("userId", userId);
+                    hashMap.put("姓名", 姓名);
+                    hashMap.put("性別", 性別);
+                    hashMap.put("血型", 血型);
+                    hashMap.put("住址", 住址);
+                    hashMap.put("藥物過敏", 藥物過敏);
+                    hashMap.put("病史", 病史);
+                    hashMap.put("緊急聯絡人姓名1", 緊急聯絡人姓名1);
+                    hashMap.put("緊急聯絡人電話1", 緊急聯絡人電話1);
+                    hashMap.put("緊急聯絡人姓名2", 緊急聯絡人姓名2);
+                    hashMap.put("緊急聯絡人電話2", 緊急聯絡人電話2);
 
-                HashMap<String,String> hashMap=new HashMap<>();
-                hashMap.put("userId",userId);
-                hashMap.put("姓名",姓名);
-                hashMap.put("性別",性別);
-                hashMap.put("血型",血型);
-                hashMap.put("住址",住址);
-                hashMap.put("藥物過敏",藥物過敏);
-                hashMap.put("病史",病史);
-                hashMap.put("緊急聯絡人姓名1",緊急聯絡人姓名1);
-                hashMap.put("緊急聯絡人電話1",緊急聯絡人電話1);
-                hashMap.put("緊急聯絡人姓名2",緊急聯絡人姓名2);
-                hashMap.put("緊急聯絡人電話2",緊急聯絡人電話2);
-
-
-                reference.setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(MedicardWrite.this, "新增成功", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MedicardWrite.this, "新增失敗", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    reference.setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(MedicardWrite.this, "新增成功", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(MedicardWrite.this, "新增失敗", Toast.LENGTH_SHORT).show();
+                        }
+                    });
             }
         });
 
-        motify.setOnClickListener(new View.OnClickListener() {
+        /*motify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseUser rUser=mAuth.getCurrentUser();
@@ -137,7 +135,7 @@ public class MedicardWrite extends AppCompatActivity {
                     }
                 });
             }
-        });
+        });*/
 
 
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -88,16 +87,12 @@ public class MedicalCard extends AppCompatActivity {
                             醫卡tv_緊急電話1.setText(緊急電話1);
                             醫卡tv_緊急姓名2.setText(緊急姓名2);
                             醫卡tv_緊急電話2.setText(緊急電話2);
-
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-
                     }
                 });
-
             }
         });
 
