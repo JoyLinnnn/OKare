@@ -74,22 +74,23 @@ public class CurrentLocation extends FragmentActivity implements OnMapReadyCallb
         setContentView(R.layout.activity_current_location);
         //getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
-        ImageButton IB_首頁=findViewById(R.id.IB_首頁);
-        IB_首頁.setOnClickListener(new View.OnClickListener() {
+        ImageButton IB_即首=findViewById(R.id.IB_即首);
+        IB_即首.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(CurrentLocation.this,Homepage.class);
                 startActivity(intent);
             }
         });
-        ImageButton IB_個人=findViewById(R.id.IB_個人);
-        IB_個人.setOnClickListener(new View.OnClickListener() {
+        ImageButton IB_即個=findViewById(R.id.IB_即個);
+        IB_即個.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(CurrentLocation.this,Personal.class);
                 startActivity(intent);
             }
         });
+
         ImageButton IB_居=findViewById(R.id.IB_居);
         IB_居.setOnClickListener(new View.OnClickListener() {
             @Override

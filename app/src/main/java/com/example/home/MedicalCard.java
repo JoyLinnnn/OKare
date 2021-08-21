@@ -25,8 +25,7 @@ import java.util.Map;
 
 public class MedicalCard extends AppCompatActivity {
     private Context context=this;
-    private ImageButton mFinish,提醒事項_IB;
-    private Button load;
+    private ImageButton mFinish,提醒事項_IB,load;
     private TextView 醫卡tv_姓名,醫卡tv_性別,醫卡tv_血型,醫卡tv_住址,醫卡tv_藥物過敏,醫卡tv_病史,醫卡tv_緊急姓名1,醫卡tv_緊急電話1,醫卡tv_緊急姓名2,醫卡tv_緊急電話2;
     private FirebaseFirestore db;
     private FirebaseDatabase database;
@@ -38,6 +37,8 @@ public class MedicalCard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_card);
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         提醒事項_IB=findViewById(R.id.提醒事項_IB);
         mFinish = findViewById(R.id.醫卡_完成按鈕_IB);
         load=findViewById(R.id.load);

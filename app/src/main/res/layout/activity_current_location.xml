@@ -137,13 +137,13 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/IB_首頁"
+            android:id="@+id/IB_即首"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/coffee_color"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/home" />
+            android:src="@drawable/_down2" />
 
         <ImageView
             android:id="@+id/imageView28"
@@ -151,17 +151,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@drawable/aline" />
+            android:src="@drawable/aline" />
 
         <ImageButton
-            android:id="@+id/IB_個人"
+            android:id="@+id/IB_即個"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/coffee_color"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/personinfo" />
-
+            android:src="@drawable/_down3" />
     </LinearLayout>
 
 </RelativeLayout>

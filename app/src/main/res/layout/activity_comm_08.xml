@@ -33,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:orientation="horizontal"
+        android:layout_marginTop="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/衛_OKare_IV">
@@ -177,7 +178,7 @@
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="0dp"
-        android:layout_height="110dp"
+        android:layout_height="150dp"
         android:background="@drawable/_whitebackground"
         app:layout_constraintBottom_toBottomOf="@+id/飲_白框_IV"
         app:layout_constraintEnd_toEndOf="@+id/飲_白框_IV"
