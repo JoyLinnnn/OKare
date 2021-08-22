@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -26,7 +28,9 @@ import java.util.List;
 public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder> {
     private List<ModelUsers> mList;
     private Activity activity;
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+    private DatabaseReference reference;
+    private FirebaseAuth mAuth;
+    //DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
     public AdapterUsers(List<ModelUsers>mList, Activity activity){
         this.mList = mList;
@@ -49,11 +53,16 @@ public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder
         holder.btn_hapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mAuth= FirebaseAuth.getInstance();
+                FirebaseUser rUser=mAuth.getCurrentUser();
+                assert rUser !=null;
+                String userId=rUser.getUid();
+                reference = FirebaseDatabase.getInstance().getReference("Remind").child(userId);
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setPositiveButton("是", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        database.child("Users").child(data.getKey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                        reference.child(data.getKey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(activity, "資料刪除成功! ", Toast.LENGTH_SHORT).show();
