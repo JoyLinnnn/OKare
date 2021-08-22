@@ -1,17 +1,19 @@
 package com.example.home;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,9 +25,11 @@ import java.util.ArrayList;
 public class Medicine extends AppCompatActivity {
     FloatingActionButton ad;
     AdapterMedicine adapterMedicine;
-    DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+    //DatabaseReference data = FirebaseDatabase.getInstance().getReference();
     ArrayList<ModelMedicine> listMedicine;
     RecyclerView tv_tamp;
+    private DatabaseReference reference;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +54,12 @@ public class Medicine extends AppCompatActivity {
     }
 
     private void tampData() {
-        data.child("Medicine").addValueEventListener(new ValueEventListener() {
+        mAuth=FirebaseAuth.getInstance();
+        FirebaseUser rUser=mAuth.getCurrentUser();
+        assert rUser !=null;
+        String userId=rUser.getUid();
+        reference = FirebaseDatabase.getInstance().getReference("Medicine").child(userId);
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 listMedicine = new ArrayList<>();

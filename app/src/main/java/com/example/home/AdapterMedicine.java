@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -26,7 +28,10 @@ import java.util.List;
 public class AdapterMedicine extends RecyclerView.Adapter<AdapterMedicine.MyHolder> {
     private List<ModelMedicine> mmList;
     private Activity activity;
-    DatabaseReference dara = FirebaseDatabase.getInstance().getReference();
+    private DatabaseReference reference;
+    private FirebaseAuth mAuth;
+    //DatabaseReference dara = FirebaseDatabase.getInstance().getReference();
+    ;
 
     public AdapterMedicine(List<ModelMedicine>mmList, Activity activity){
         this.mmList = mmList;
@@ -43,16 +48,22 @@ public class AdapterMedicine extends RecyclerView.Adapter<AdapterMedicine.MyHold
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         final ModelMedicine da = mmList.get(position);
+
         holder.tv_meditime.setText("用藥時間："+ da.getMeditime());
         holder.tv_mediname.setText("藥品及數量："+ da.getMediname());
         holder.btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mAuth=FirebaseAuth.getInstance();
+                FirebaseUser rUser=mAuth.getCurrentUser();
+                assert rUser !=null;
+                String userId=rUser.getUid();
+                reference = FirebaseDatabase.getInstance().getReference("Medicine").child(userId);
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setPositiveButton("是", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        dara.child("Medicine").child(da.getCey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                        reference.child(da.getCey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(activity, "資料刪除成功! ", Toast.LENGTH_SHORT).show();

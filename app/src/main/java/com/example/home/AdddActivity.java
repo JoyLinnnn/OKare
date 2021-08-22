@@ -1,8 +1,5 @@
 package com.example.home;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -17,14 +14,18 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.w3c.dom.Text;
-
 import java.util.Calendar;
+import java.util.HashMap;
 
 public class AdddActivity extends AppCompatActivity {
     EditText edHint;
@@ -37,10 +38,12 @@ public class AdddActivity extends AppCompatActivity {
     private Button btnSetOnceAlarm;
 
     private AlarmReceiver alarmReceiver;
+    private DatabaseReference reference;
+    private FirebaseAuth mAuth;
     private int mYear, mMonth, mDay, mHour, mMinute;
     private int mHourRepeat, mMinuteRepeat;
 
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+    //DatabaseReference database = FirebaseDatabase.getInstance().getReference();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,13 +53,23 @@ public class AdddActivity extends AppCompatActivity {
         edNew= findViewById(R.id.edNew);
         edTime = findViewById(R.id.edTime);
         edHint = findViewById(R.id.edHint);
+        mAuth= FirebaseAuth.getInstance();
         btn_sureadd = findViewById(R.id.確定新增);
         btn_sureadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseUser rUser=mAuth.getCurrentUser();
+                assert rUser !=null;
+                String userId=rUser.getUid();
+                reference = FirebaseDatabase.getInstance().getReference("Remind").child(userId);
                 String getNew1 = edNew.getText().toString();
                 String getTime = edTime.getText().toString();
                 String getHint = edHint.getText().toString();
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("userId", userId);
+                hashMap.put("backtime", getTime);
+                hashMap.put("hossite",getHint);
+                hashMap.put("new1",getNew1);
 
                 if (getNew1.isEmpty()) {
                     edNew.setError("請選擇回診日期...");
@@ -65,7 +78,7 @@ public class AdddActivity extends AppCompatActivity {
                 } else if (getHint.isEmpty()) {
                     edHint.setError("請輸入醫院門診及編號...");
                 } else {
-                    database.child("Users").push().setValue(new ModelUsers(getNew1, getTime, getHint)).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    reference.push().setValue(new ModelUsers(getNew1, getTime, getHint)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast.makeText(AdddActivity.this, "回診提醒輸入成功 ! ", Toast.LENGTH_SHORT).show();

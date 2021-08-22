@@ -1,17 +1,19 @@
 package com.example.home;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,13 +25,16 @@ import java.util.ArrayList;
 public class Doctor extends AppCompatActivity {
     FloatingActionButton addd;
     AdapterUsers adapterUsers;
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+    //DatabaseReference database = FirebaseDatabase.getInstance().getReference();
     ArrayList<ModelUsers> listUsers;
     RecyclerView tv_tampil;
+    private DatabaseReference reference;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
+        mAuth= FirebaseAuth.getInstance();
         getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton 服藥_IB = findViewById(R.id.服藥_IB);
@@ -167,7 +172,12 @@ public class Doctor extends AppCompatActivity {
     }
 
     private void tempilDate() {
-        database.child("Users").addValueEventListener(new ValueEventListener() {
+        mAuth= FirebaseAuth.getInstance();
+        FirebaseUser rUser=mAuth.getCurrentUser();
+        assert rUser !=null;
+        String userId=rUser.getUid();
+        reference = FirebaseDatabase.getInstance().getReference("Remind").child(userId);
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 listUsers = new ArrayList<>();
