@@ -21,7 +21,7 @@ public class Webview extends AppCompatActivity {
         WebSettings webSettings=web.getSettings();
         ((WebSettings) webSettings).setJavaScriptEnabled(true);
         web.setWebViewClient(new Callback());
-        web.loadUrl("http://192.168.35.52/cam.mjpeg");
+        web.loadUrl("http://192.168.43.172/cam.mjpeg");
         getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         ImageButton 居_居家檢測_IB=findViewById(R.id.居_居家檢測_IB);

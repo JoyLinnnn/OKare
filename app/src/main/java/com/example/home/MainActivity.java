@@ -46,16 +46,6 @@ public class MainActivity extends AppCompatActivity {
                     temp.setText(tempdata);
                     HR.setText(HRdata);
                     SpO2.setText(SpO2data);
- //                   String HRdata=HR.getText().toString();
- //                   String SpO2data=SpO2.getText().toString();
- //                   String humdata=hum.getText().toString();//
- //                   String tempdata=temp.getText().toString();
- //                   HashMap<String,String> userMap=new HashMap<>();
-//                    userMap.put("HR",HRdata);
-//                   userMap.put("SpO2",SpO2data);
-//                    userMap.put("Humidity",humdata);
-//                    userMap.put("Temperature",tempdata);
-//                    mydb.setValue(userMap);
                 }
 
 
