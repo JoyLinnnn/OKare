@@ -1,24 +1,42 @@
 package com.example.home;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.common.util.NumberUtils;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.HashMap;
+import java.io.InputStream;
+import java.util.Calendar;
+
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
+
 
 public class MainActivity extends AppCompatActivity {
     DatabaseReference mydb;
     TextView HR,SpO2,temp,hum;
+
+    //1013跳通知
+    NotificationManager notificationManager;
+    NotificationChannel channel;
+    Context context=this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     temp.setText(tempdata);
                     HR.setText(HRdata);
                     SpO2.setText(SpO2data);
+
                 }
 
 
@@ -147,7 +166,91 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        }
+        //1013 跳通知
+        notificationManager=(NotificationManager)this.getSystemService(NOTIFICATION_SERVICE);
+        channel=new NotificationChannel("ID","home",NotificationManager.IMPORTANCE_HIGH);
+        notificationManager.createNotificationChannel(channel);
 
+        double avg=0.0;
+        double curTemp=0.0;
+        double ans=0;
+        String s="";
+
+        //取得目前月份
+        Calendar mCal = Calendar.getInstance();
+        CharSequence getMonth = DateFormat.format("MM", mCal.getTime());    // kk:24小時制, hh:12小時制
+        String mm=(String)getMonth;
+        int m=Integer.parseInt(mm);
+
+        //計算當月平均
+        avg=Double.parseDouble(getMonthAverage(m));
+        //取得目前溫度
+        curTemp=Double.parseDouble(temp.getText().toString());
+        //計算溫差
+        ans=compute(curTemp,avg);
+        //訊息字串
+        s=printString(ans);
+
+        //通知
+        Notification.Builder builder=new Notification.Builder(context);
+        builder.setSmallIcon(R.mipmap.ic_launcher)
+                .setChannelId("ID")
+                .setContentTitle("歷年"+m+"月均溫: "+avg)
+                .setContentText(s);
+
+        Notification notification=builder.build();
+        notificationManager.notify(0,notification);
 
     }
+
+    private String printString(double ans) {
+        String s;
+        if(ans>5){
+            s="溫差為 "+ans+" 度，注意高溫";
+            return s;
+        }else if(ans<-5){
+            s="溫差為 "+ans+" 度，注意低溫";
+            return s;
+        }else{
+            s="溫差為 "+ans+" 度";
+            return s;
+        }
+    }
+
+    private double compute(double curTemp, double avg) {
+        return Math.round((curTemp-avg)*100.0)/100.0;
+    }
+
+
+    private String getMonthAverage(int m) {
+        //讀excel
+        Double avg =0.0;
+        String ans="";
+        int t=0;
+
+        try {
+
+            AssetManager am = getAssets();
+            InputStream is = am.open("各月份氣溫濕度.xls");
+            Workbook wb = Workbook.getWorkbook(is);
+            Sheet s = wb.getSheet(0);
+            int row = s.getRows();
+
+            //取得每年的月份
+            for (int i = m, j = 0; i < row; i = i + 12, j++) {
+                Cell z = s.getCell(1, i);
+                avg=avg+Double.parseDouble(z.getContents());
+                t=j;
+            }
+            avg=Math.round((avg/t)*100.0)/100.0;
+            ans=String.valueOf(avg);
+
+        } catch (Exception e) {
+
+        }
+
+        return ans;
+
+    }
+
+}

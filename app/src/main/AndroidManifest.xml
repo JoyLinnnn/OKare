@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Home">
-        <activity android:name=".MedicardWrite"></activity>
+        <activity android:name=".MedicardWrite" />
         <activity android:name=".ReserveHospital" />
         <activity android:name=".ForgetPSWD" />
 
